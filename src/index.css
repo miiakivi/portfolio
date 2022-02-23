@@ -1,13 +1,134 @@
+:root {
+    --main-text-color: #FF5E9F;
+    --bg-light: #f1f1f1;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    padding: 0.5em 1.5em;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    background-color: var(--bg-light);
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+
+}
+
+.main-btn {
+    border: 3px solid var(--main-text-color);
+    color: var(--main-text-color);
+}
+
+.main-btn:hover {
+    color: var(--bg-light);
+    background-color: var(--main-text-color);
+}
+
+/*---TYPOGRAPHY---*/
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 8rem;
+    text-transform: uppercase;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+footer {
+    border: 1px solid #FF5E9F;
+    color: var(--main-text-color);
+    width: 100%;
+    min-height: 100px;
+    margin-top: 2em;
+}
+
+main {
+    border: 1px solid mediumpurple;
+
+}
+
+/* --- GENERAL --- */
+
+.c-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* --- NAVIGATION --- */
+
+.nav {
+    padding: 1em;
+    border: 1px solid cornflowerblue;
+}
+
+
+.nav-link {
+    color: var(--main-text-color);
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: var(--main-text-color);
+    text-decoration: underline;
+}
+
+/* --- HERO --- */
+
+.hero {
+    padding: 5em 0;
+}
+
+.hero__section {
+    border: 1px solid gold;
+    width: 60%;
+    text-transform: uppercase;
+}
+
+
+/* --- ABOUT --- */
+
+.about {
+    border: 2px solid palegreen;
+    width: 70%;
+    margin-left: inherit;
+    padding: 5em 1em;
+}
+
+.flex-col-2 {
+    width: 60%;
+    margin-left: 2em;
+    border: 1px solid mediumslateblue;
 }
