@@ -1,3 +1,4 @@
+
 :root {
     --main-text-color: #FF5E9F;
     --bg-light: #f1f1f1;
@@ -33,6 +34,7 @@ button {
     font-size: 0.9rem;
     text-transform: uppercase;
     background-color: var(--bg-light);
+    border-radius: 10px;
     transition: all 0.2s ease-in-out;
 }
 
@@ -56,9 +58,13 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
 }
 
-h1 {
-    font-size: 8rem;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
     text-transform: uppercase;
+}
+
+h1 {
+    font-size: 7rem;
 }
 
 code {
@@ -124,7 +130,11 @@ main {
     border: 2px solid palegreen;
     width: 70%;
     margin-left: inherit;
-    padding: 5em 1em;
+}
+
+.about__container {
+    padding: 3em 1em;
+
 }
 
 .flex-col-2 {
@@ -132,3 +142,48 @@ main {
     margin-left: 2em;
     border: 1px solid mediumslateblue;
 }
+
+/* --- SKILLS --- */
+.skills-container {
+    width: 100%;
+    max-width: 750px;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 3em 0;
+
+}
+
+.icon-grid__item {
+    padding: 2em 0;
+    margin: 0.5em;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon-grid__item:hover {
+    background-color: var(--main-text-color);
+    color: var(--bg-light);
+}
+
+.icon-grid__item:hover > .dev-icon {
+    color: var(--bg-light);
+}
+
+.icon-grid__item p {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.dev-icon {
+    font-size: 1.8rem;
+    color: var(--main-text-color);
+}
+
+
+
