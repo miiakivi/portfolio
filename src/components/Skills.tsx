@@ -2,8 +2,9 @@ import React from "react";
 
 function Skills() {
     return (
-        <div className="skills-container">
-            <h2 className="section-header text-start">Skills</h2>
+        <div className="skills-container section-container">
+            <p>Technologies that I am familiar with</p>
+            <h2 className="section-header">Skills</h2>
             <div className="icon-grid">
                 <div className="icon-grid__item">
                     <i className="devicon-nodejs-plain dev-icon"/>

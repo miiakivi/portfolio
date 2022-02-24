@@ -6,17 +6,19 @@ import Skills from "./components/Skills";
 import About from "./components/About";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import Socials from "./components/Socials";
 
 function App() {
 
     return (
         <div className="App">
+            <Socials/>
             <Navigation/>
             <main className="c-container">
                 <Hero/>
                 <About/>
-                <Skills/>
                 <Projects/>
+                <Skills/>
             </main>
             <Footer/>
         </div>
