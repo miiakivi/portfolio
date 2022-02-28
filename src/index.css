@@ -1,20 +1,23 @@
 
 :root {
-    --main-theme-color: #8961de;
-    --theme-bg: #f6f2ff;
-    --theme-bg-accent: #eee8ff;
-    --theme-text-color: #262b2f;
-}
-
-/* DARK THEME
     --main-theme-color: #C08EF7;
     --theme-bg: #1E1E1E;
     --theme-text-color: #f1f1f1;
+    --theme-bg-accent: #1E1E1E;
+
+}
+
+/* DARK THEME
+   --main-theme-color: #C08EF7;
+    --theme-bg: #1E1E1E;
+    --theme-text-color: #f1f1f1;
+    --theme-bg-accent: #1E1E1E;
 */
 
 /* LIGHT THEME
-    --main-theme-color: #8961de;
-    --theme-bg: #f1f1f1;
+      --main-theme-color: rgba(128, 8, 254, 0.78);
+    --theme-bg: #f6f2ff;
+    --theme-bg-accent: #eee8ff;
     --theme-text-color: #262b2f; /
 */
 
@@ -39,6 +42,7 @@ body {
 
 }
 
+
 img {
     display: block;
     max-width: 100%;
@@ -52,6 +56,10 @@ button {
     background-color: var(--theme-bg);
     transition: all 0.2s ease-in-out;
 }
+
+
+
+
 
 
 .main-btn {
@@ -96,6 +104,7 @@ footer {
 
 main {
     border: 1px solid mediumpurple;
+    z-index: 10;
 
 }
 
@@ -108,16 +117,26 @@ main {
 
 .section-container {
     width: 100%;
-    margin: 3em 0;
     padding: 3em 0;
 }
 
-@media (min-width: 800px) {
-    .section-container {
-        width: 70%;
-        min-height: 90vh;
-    }
+.light__accent {
+    background-color: var(--theme-bg-accent);
 }
+
+.dark__accent {
+    /*background-color: var(--main-theme-color);*/
+    background-color: mediumpurple;
+    color: #1E1E1EFF;
+}
+
+.section {
+    border: 2px dashed #FF5E9F;
+    width: 95%;
+    max-width: 1100px;
+    margin: 3em auto;
+}
+
 
 .section-title {
     color: var(--main-theme-color);
@@ -172,6 +191,7 @@ main {
 /* --- HERO --- */
 
 .hero {
+    min-height: 90vh;
 
 }
 
@@ -183,9 +203,9 @@ main {
 
 /* --- ABOUT --- */
 
+
 .about {
-    margin-left: inherit;
-    background-color: var(--theme-bg-accent);
+    max-width: 900px;
 }
 
 .about__container {
@@ -202,6 +222,7 @@ main {
 }
 
 @media (min-width: 800px) {
+
     .about__container {
         display: flex;
         justify-content: space-between;
@@ -217,9 +238,6 @@ main {
 /* --- PROJECTS ---*/
 
 .projects {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
 }
 
 .projects__flex {
@@ -245,7 +263,7 @@ main {
 
 .projects__item:hover .projects__item-overlay {
     height: 100%;
-    background-color: rgba(192, 142, 247, 0.91)
+    background-color: var(--main-theme-color);
 }
 
 .projects__item-img {
@@ -260,8 +278,8 @@ main {
     width: 100%;
     height: 0;
     overflow: hidden;
-    background-color: rgba(192, 142, 247, 0.91);
-    color: #282c34;
+    background-color: var(--main-theme-color);
+    color: #d7d7d7;
     transition: .65s cubic-bezier(0.85, -0.21, 0.27, 1.55);
 }
 
@@ -272,8 +290,8 @@ main {
 
 /* --- SKILLS --- */
 .skills-container {
-    width: 100%;
     max-width: 800px;
+
 
 }
 
@@ -313,5 +331,7 @@ main {
 
 /* --- FOOTER --- */
 footer {
+    background-color: var(--main-theme-color);
+    color: var(--theme-text-color);
     min-height: 500px;
 }

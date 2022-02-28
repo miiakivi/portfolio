@@ -14,7 +14,7 @@ function App() {
         <div className="App">
             <Socials/>
             <Navigation/>
-            <main className="c-container">
+            <main>
                 <Hero/>
                 <About/>
                 <Projects/>
