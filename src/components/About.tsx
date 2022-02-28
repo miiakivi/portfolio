@@ -4,8 +4,10 @@ import React from "react";
 function About() {
     return (
         <section className="about section-container">
-            <p>Who I am?</p>
-            <h2 className="section-header">About</h2>
+            <div className="section-header">
+                <p className="section-subtitle">Who I am</p>
+                <h2 className="section-title">About</h2>
+            </div>
             <div className="about__container">
                 <div>
                     <small>Miia Nyyssönen - est 1992</small>
@@ -14,11 +16,14 @@ function About() {
                     </div>
                 </div>
                 <div className="about__container-item">
-                    <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis nam omnis!
-                        At
-                        commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem
-                        ratione similique tempore, voluptatibus.
-                    </strong>
+                    <p>
+                        <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis nam omnis!
+                            At
+                            commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem
+                            ratione similique tempore, voluptatibus.
+                        </strong>
+                    </p>
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis nam omnis! At
                         commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem
                         ratione similique tempore, voluptatibus.
