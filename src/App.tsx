@@ -12,7 +12,6 @@ function App() {
 
     return (
         <div  className="App">
-            <Socials/>
             <Navigation/>
             <main>
                 <Hero/>
