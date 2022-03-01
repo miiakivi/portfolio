@@ -11,7 +11,7 @@ import Socials from "./components/Socials";
 function App() {
 
     return (
-        <div className="App">
+        <div  className="App">
             <Socials/>
             <Navigation/>
             <main>
