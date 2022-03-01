@@ -32,26 +32,28 @@ function Navigation() {
             root.style.setProperty('--theme-text-color', "#f1f1f1");
             root.style.setProperty('--project-overlay-color', "rgba(156,94,225,0.85)");
             root.style.setProperty('--theme-footer-color', "#1E1E1E");
-
-
         }
     }, [theme] );
 
     return (
         <div className="navigation-container">
             <nav className="nav">
+                <i className="fa-solid fa-bars"/>
                 <div className="nav ">
                     <a className="navbar-brand" aria-current="page" href="#">🌟</a>
                 </div>
                 <ul className="nav nav-list">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">Link</a>
+                        <a className="nav-link active" aria-current="page" href="#">About</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Link</a>
+                        <a className="nav-link" href="#">Projects</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Link</a>
+                        <a className="nav-link" href="#">Skills</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">Contact me</a>
                     </li>
                 </ul>
                 <div className="nav">
@@ -65,6 +67,5 @@ function Navigation() {
 
     );
 }
-
 
 export default Navigation;

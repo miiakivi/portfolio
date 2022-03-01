@@ -9,7 +9,7 @@ function Hero() {
         <div className="section-container">
             <div className="hero section">
                 <section className="hero__section">
-                    <h1 className="hero__title">Hi, I'm Miia Nyy</h1>
+                    <h1 className="hero__title">Hi, I am <br/>Miia Nyyssönen</h1>
                     <div className="hero__subtitle">
                         <p>Software Developer</p>
                         <div className="word-animation-wrapper">

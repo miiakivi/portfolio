@@ -63,7 +63,7 @@ button {
 }
 
 button:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
 }
 
 .main-btn {
@@ -98,12 +98,20 @@ h1, h2, h3, h4, h5, h6, p {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     font-weight: bolder;
 }
 
 h1 {
-    font-size: 10vh;
+    font-size: 3.5rem;
+}
+
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 12vh;
+
+    }
 }
 
 p {
@@ -189,14 +197,13 @@ main {
 }
 
 /* --- NAVIGATION --- */
-/*
+
 .navigation-container {
-    position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 94, 159, 0.76);
+    background-color: var(--main-theme-color);
     z-index: 10;
-}*/
+}
 
 nav {
     border: 2px dashed #FF5E9F;
@@ -211,22 +218,19 @@ nav {
 }
 
 .nav-link {
-    color: var(--main-theme-color);
-    background: linear-gradient(currentColor 0 0) var(--p, 50%) 100% /var(--d, 10%) 3px no-repeat;
-    transition: 0.3s, background-position 0s;
+    color: #f1f1f1;
+    font-weight: 500;
 }
 
 .nav-link:hover {
     color: var(--main-theme-color);
-    --d: 100%;
-    --p: 0%;
-    transition: 0.3s, background-size 0.3s 0.3s;
 }
 
 /* --- HERO --- */
 
 .hero {
-    min-height: 90vh;
+    border: 2px solid blueviolet;
+    min-height: 63vh;
 }
 
 .hero__section {
@@ -448,7 +452,7 @@ footer {
 .footer__socials-title {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     font-weight: bolder;
     color: var(--main-theme-color);
     font-size: 1.5rem;
@@ -460,7 +464,7 @@ footer {
     text-decoration: none;
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     font-size: 0.8rem;
     background: linear-gradient(currentColor 0 0) 0 100% /var(--d, 0) 3px no-repeat;
     transition: 0.5s;
