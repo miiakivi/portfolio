@@ -2,8 +2,7 @@
 /* --- HERO --- */
 
 .hero {
-    border: 2px solid blueviolet;
-    min-height: 63vh;
+    min-height: 72vh;
 }
 
 .hero__section {

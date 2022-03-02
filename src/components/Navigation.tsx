@@ -1,43 +1,66 @@
 import { useEffect, useState } from "react";
+import DarkModeToggle from "react-dark-mode-toggle";
 
-function changePageThemeColors( currentTheme : string | null ) {
+function changePageThemeColors( isDarkMode : boolean | undefined ) {
     const root = document.documentElement;
 
-    if ( currentTheme === 'light' ) {
-        root.style.setProperty( '--main-theme-color', "rgba(128, 8, 254, 0.78)" );
-        root.style.setProperty( '--theme-bg', "#f6f2ff" );
-        root.style.setProperty( '--theme-bg-accent', "#eee8ff" );
-        root.style.setProperty( '--theme-text-color', "#262b2f" );
-        root.style.setProperty( '--project-overlay-color', "#8008FEC6" );
-        root.style.setProperty( '--theme-footer-color', "#eee8ff" );
-
-
-    } else {
+    if ( isDarkMode ) {
         root.style.setProperty( '--main-theme-color', "#9c5ee1" );
         root.style.setProperty( '--theme-bg', "#23252d" );
         root.style.setProperty( '--theme-bg-accent', "#252b34" );
         root.style.setProperty( '--theme-text-color', "#f1f1f1" );
         root.style.setProperty( '--project-overlay-color', "rgba(156,94,225,0.85)" );
         root.style.setProperty( '--theme-footer-color', "#1E1E1E" );
+    } else {
+        root.style.setProperty( '--main-theme-color', "rgb(128,8,254)" );
+        root.style.setProperty( '--theme-bg', "#f6f2ff" );
+        root.style.setProperty( '--theme-bg-accent', "#eee8ff" );
+        root.style.setProperty( '--theme-text-color', "#262b2f" );
+        root.style.setProperty( '--project-overlay-color', "#8008FEC6" );
+        root.style.setProperty( '--theme-footer-color', "#eee8ff" );
+    }
+}
+
+function checkBrowserThemePreference( setIsDarkMode : Function ) {
+    // Check to see if Media-Queries are supported
+    if ( window.matchMedia ) {
+        // Check if the dark-mode Media-Query matches
+        if ( window.matchMedia( '(prefers-color-scheme: dark)' ).matches ) {
+            // Dark
+            setIsDarkMode( true );
+            console.log( 'prefers dark mode' )
+
+        } else {
+            // Light
+            setIsDarkMode( false );
+            console.log( 'prefers light mode' )
+        }
+    } else {
+        // Default (when Media-Queries are not supported)
+        setIsDarkMode( false );
+        console.log( 'not preferences' )
+
     }
 }
 
 function Navigation() {
-    const [theme, setTheme] = useState<string | null>( null );
+    const [isDarkMode, setIsDarkMode] = useState<boolean | undefined>( undefined );
     const [navIsOpen, setNavIsOpen] = useState( false );
 
     // Check users browser preference and assign theme accordingly
     useEffect( () => {
-        if ( theme === null ) {
-            setTheme( 'dark' );
-        }
+        checkBrowserThemePreference( setIsDarkMode );
+        /*
+        if ( isDarkMode === undefined ) {
+            setIsDarkMode( true );
+        }*/
     }, [] );
 
 
     // When theme state changes, change pages color scheme as well
     useEffect( () => {
-        changePageThemeColors( theme );
-    }, [theme] );
+        changePageThemeColors( isDarkMode );
+    }, [isDarkMode] );
 
     return (
         <>
@@ -70,10 +93,12 @@ function Navigation() {
                             </li>
                         </ul>
                         <div className="nav">
-                            <button
-                                onClick={ () => setTheme( ( prevValue ) => prevValue === 'dark' ? 'light' : 'dark' ) }>
-                                Change theme
-                            </button>
+
+                            <DarkModeToggle
+                                onChange={ setIsDarkMode }
+                                checked={ isDarkMode }
+                                size={ 60 }
+                            />
                         </div>
                     </nav>
 
@@ -86,7 +111,7 @@ function Navigation() {
     );
 }
 
-function openNavigation( navIsOpen : boolean ) {
+function openNavigation( navIsOpen : boolean | undefined ) {
     const navContent = document.querySelector<HTMLElement>( ".navigation-content" );
     const navContainer = document.querySelector<HTMLElement>( ".nav-container" );
     const toggleButton = document.querySelector<HTMLElement>( ".nav__toggle-btn" );
@@ -101,6 +126,8 @@ function openNavigation( navIsOpen : boolean ) {
     // Make nav content smaller or larger depending on is the nav already open or not
     navContent.style.width = navIsOpen ? '50px' : '100%';
     navContent.style.height = navIsOpen ? '50px' : '100%';
+    navContent.style.borderRadius = navIsOpen ? '0 10px 10px 0' : '0';
+
 
     // Rotate toggle button
     toggleButton.style.transform = navIsOpen ? 'rotate(360deg)' : 'rotate(180deg)';

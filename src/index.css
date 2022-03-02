@@ -124,7 +124,7 @@ button:hover {
 
 /* --- ANIMATIONS --- */
 .word-animation-wrapper {
-    height: 45px;
+    height: 40px;
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
@@ -135,13 +135,13 @@ button:hover {
     height: 100%;
     padding-right: 1em;
     text-align: left;
-
 }
 
 .word-animation__word {
     display: block;
     padding-left: 10px;
     color: #ff5e9f;
+    font-weight: 500;
     animation: spin_words 7s infinite;
 }
 
