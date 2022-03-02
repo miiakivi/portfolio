@@ -1,0 +1,51 @@
+
+/* --- ABOUT --- */
+
+
+.accent-title {
+    color: #f1f1f1;
+}
+
+.accent-subtitle {
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-style: italic;
+    background-color: #ff5e9f;
+    color: #dddddd;
+    width: fit-content;
+    margin: 0 auto 1em;
+}
+
+.about {
+    max-width: 900px;
+}
+
+.about__container {
+    margin-top: 3em;
+}
+
+.about__img-container img {
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+
+}
+
+.about__container-item {
+    margin-top: 2em;
+}
+
+@media (min-width: 800px) {
+
+    .about__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about__container-item {
+        width: 60%;
+        margin-left: 2em;
+        margin-top: 0;
+    }
+}

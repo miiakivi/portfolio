@@ -5,7 +5,7 @@ function About() {
     return (
         <>
 
-            <div className="section-container dark__accent">
+            <div id="about" className="section-container dark__accent">
                 <section className="about section">
                     <div className="section-header">
                         <p className="section-subtitle accent-subtitle">Who I am</p>

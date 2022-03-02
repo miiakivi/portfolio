@@ -1,0 +1,78 @@
+
+/* --- NAVIGATION --- */
+
+.toggle-container {
+    text-align: right;
+    padding: 11px 15px;
+
+}
+
+.nav__toggle-btn {
+    transition: all 0.6s ease-in-out;
+    font-size: 1.5rem;
+
+}
+
+.navigation-content {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 50px;
+    width: 50px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: var(--project-overlay-color);
+    border-radius: 0 10px 10px 0;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-container {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+@media (min-width: 600px) {
+    .navigation-content {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: initial;
+        border-radius: 0;
+    }
+
+    .nav-container {
+        margin: 0;
+    }
+
+    .toggle-container {
+        display: none;
+    }
+
+
+}
+
+nav {
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.nav {
+    padding: 1em;
+    border: 1px solid cornflowerblue;
+}
+
+.nav-link {
+    color: #f1f1f1;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--main-theme-color);
+}

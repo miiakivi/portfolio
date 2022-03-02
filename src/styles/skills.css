@@ -1,0 +1,42 @@
+
+/* --- SKILLS --- */
+.skills-container {
+    max-width: 800px;
+
+
+}
+
+.icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 3em;
+}
+
+.icon-grid__item {
+    border: 1px solid var(--main-theme-color);
+    width: 100px;
+    padding: 1em;
+    transition: all 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+}
+
+@media (min-width: 800px) {
+    .icon-grid__item {
+        width: 120px;
+        padding: 2em 1em;
+    }
+}
+
+.icon-grid__item p {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.dev-icon {
+    font-size: 1.8rem;
+    color: var(--main-theme-color);
+}

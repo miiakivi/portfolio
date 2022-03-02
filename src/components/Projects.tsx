@@ -4,7 +4,7 @@ import projectImg from "../assets/project.jpg";
 
 function Projects() {
     return (
-        <div className="section-container light__accent">
+        <div id="projects" className="section-container light__accent">
             <div className="projects section">
                 <div className="section-header">
                     <p className="section-subtitle">A Selection Of Stuff I've Built</p>

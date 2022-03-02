@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
     return (
-        <footer>
+        <footer id="contact">
             <div className="section">
                 <div className="word-animation-wrapper footer-animation">
                     <p>Lets</p>
