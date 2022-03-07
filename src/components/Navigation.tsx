@@ -76,7 +76,7 @@ function Navigation() {
                     <nav className="">
                         <div className="nav ">
                             <a className="navbar-brand" aria-current="page" href="#">
-                                <img width="50" src={logo} alt=""/>
+                                <img width="50" src={logo} alt="portfolio logo" className="mx-auto"/>
                             </a>
                         </div>
                         <ul className="nav nav-list">

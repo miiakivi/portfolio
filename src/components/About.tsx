@@ -16,7 +16,7 @@ function About() {
                             <div className="about__img-container">
                                 <small>Miia Nyyssönen - est 1992</small>
 
-                                <img width={ 200 } src={ profileImg } alt="Miia's face"/>
+                                <img width={ 300 } src={ profileImg } alt="Miia's face"/>
                             </div>
                         </div>
                         <div className="about__container-item">
