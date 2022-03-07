@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+
 import DarkModeToggle from "react-dark-mode-toggle";
+
+import logo from "../assets/logo.png"
 
 function changePageThemeColors( isDarkMode : boolean | undefined ) {
     const root = document.documentElement;
@@ -72,7 +75,9 @@ function Navigation() {
                 <div className="nav-container">
                     <nav className="">
                         <div className="nav ">
-                            <a className="navbar-brand" aria-current="page" href="#">🌟</a>
+                            <a className="navbar-brand" aria-current="page" href="#">
+                                <img width="50" src={logo} alt=""/>
+                            </a>
                         </div>
                         <ul className="nav nav-list">
                             <li className="nav-item">
