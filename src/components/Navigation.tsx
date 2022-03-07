@@ -21,6 +21,7 @@ function changePageThemeColors( isDarkMode : boolean | undefined ) {
     }
 }
 
+// Check users browser preference and assign theme accordingly
 function checkBrowserThemePreference( setIsDarkMode : Function ) {
     // Check to see if Media-Queries are supported
     if ( window.matchMedia ) {
@@ -47,13 +48,8 @@ function Navigation() {
     const [isDarkMode, setIsDarkMode] = useState<boolean | undefined>( undefined );
     const [navIsOpen, setNavIsOpen] = useState( false );
 
-    // Check users browser preference and assign theme accordingly
     useEffect( () => {
         checkBrowserThemePreference( setIsDarkMode );
-        /*
-        if ( isDarkMode === undefined ) {
-            setIsDarkMode( true );
-        }*/
     }, [] );
 
 
@@ -74,7 +70,7 @@ function Navigation() {
                 </div>
 
                 <div className="nav-container">
-                    <nav className="nav">
+                    <nav className="">
                         <div className="nav ">
                             <a className="navbar-brand" aria-current="page" href="#">🌟</a>
                         </div>
@@ -89,16 +85,23 @@ function Navigation() {
                                 <a className="nav-link" href="#skills">Skills</a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link" href="#contact">CV</a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link" href="#contact">Contact me</a>
                             </li>
+
                         </ul>
                         <div className="nav">
+                            <div className="dark-mode-toggle">
+                                <p>{ isDarkMode ? "dark" : "light" }</p>
+                                <DarkModeToggle
+                                    onChange={ setIsDarkMode }
+                                    checked={ isDarkMode }
+                                    size={ 50 }
+                                />
+                            </div>
 
-                            <DarkModeToggle
-                                onChange={ setIsDarkMode }
-                                checked={ isDarkMode }
-                                size={ 60 }
-                            />
                         </div>
                     </nav>
 
@@ -116,7 +119,6 @@ function openNavigation( navIsOpen : boolean | undefined ) {
     const navContainer = document.querySelector<HTMLElement>( ".nav-container" );
     const toggleButton = document.querySelector<HTMLElement>( ".nav__toggle-btn" );
 
-
     if ( !navContainer || !navContent || !toggleButton ) {
         throw new ReferenceError( "Navigation element not found." );
     }
@@ -127,7 +129,7 @@ function openNavigation( navIsOpen : boolean | undefined ) {
     navContent.style.width = navIsOpen ? '50px' : '100%';
     navContent.style.height = navIsOpen ? '50px' : '100%';
     navContent.style.borderRadius = navIsOpen ? '0 10px 10px 0' : '0';
-
+    navContent.style.marginTop = navIsOpen ? '1em' : '0';
 
     // Rotate toggle button
     toggleButton.style.transform = navIsOpen ? 'rotate(360deg)' : 'rotate(180deg)';

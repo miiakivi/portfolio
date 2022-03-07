@@ -13,8 +13,9 @@ function About() {
                     </div>
                     <div className="about__container">
                         <div>
-                            <small>Miia Nyyssönen - est 1992</small>
                             <div className="about__img-container">
+                                <small>Miia Nyyssönen - est 1992</small>
+
                                 <img width={ 200 } src={ profileImg } alt="Miia's face"/>
                             </div>
                         </div>
@@ -35,7 +36,7 @@ function About() {
                                 commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem
                                 ratione similique tempore, voluptatibus.
                             </p>
-                            <button className="secondary-btn">Click me</button>
+                            <button className="about__btn secondary-btn">Click me</button>
                         </div>
                     </div>
                 </section>
