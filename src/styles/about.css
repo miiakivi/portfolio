@@ -33,6 +33,8 @@
 .about__img-container img {
     margin: 0 auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    border-radius: 1000px;
+    object-position: center;
 
 }
 
@@ -44,11 +46,12 @@
     margin-top: 1.5em;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
 
     .about__container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin: 3em;
     }
 

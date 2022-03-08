@@ -1,10 +1,18 @@
-import projectImg from "../assets/project.jpg";
 import React from "react";
 
-function ProjectItem () {
+interface ProjectDetailsProps {
+    image : string;
+
+}
+
+/*
+<div>
+    <img className="projects__item-img" src={ image } alt=""/>
+</div>*/
+function ProjectDetails( {image} : ProjectDetailsProps ) {
     return (
-        <div className="projects__item">
-            <img className="projects__item-img" src={ projectImg } alt=""/>
+        <div style={ {backgroundImage: `url(${ image })`} } className="projects__item">
+
             <div className="projects__item-overlay">
                 <div className="overlay__text">
                     <h5>battleships</h5>
@@ -20,4 +28,4 @@ function ProjectItem () {
     );
 }
 
-export default ProjectItem;
+export default ProjectDetails;

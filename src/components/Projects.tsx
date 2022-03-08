@@ -1,5 +1,12 @@
 import React from "react";
-import ProjectItem from "./ProjectItem";
+import ProjectDetails from "./ProjectItem";
+
+import battleshipImage from "../assets/battleshipProject.jpg";
+import weatherImage from "../assets/weatherProject.jpg";
+import cvImage from "../assets/cvProject.jpg";
+import superchatImage from "../assets/superchatProject.jpg";
+import inventoryImage from "../assets/inventoryProject.jpg";
+import azureImage from "../assets/azureProject.jpg";
 
 
 function Projects() {
@@ -13,12 +20,13 @@ function Projects() {
                 </div>
 
                 <div className="projects__flex">
-                    <ProjectItem/>
-                    <ProjectItem/>
-                    <ProjectItem/>
-                    <ProjectItem/>
-                    <ProjectItem/>
-                    <ProjectItem/>
+                    <ProjectDetails image={ battleshipImage }/>
+                    <ProjectDetails image={ weatherImage }/>
+                    <ProjectDetails image={ cvImage }/>
+                    <ProjectDetails image={ superchatImage }/>
+                    <ProjectDetails image={ azureImage }/>
+                    <ProjectDetails image={ inventoryImage }/>
+
                 </div>
             </div>
         </div>
