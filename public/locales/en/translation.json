@@ -1,0 +1,9 @@
+{
+    "navigation": {
+      "about": "about",
+      "projects": "projects",
+      "skills": "skills",
+      "cv": "cv",
+      "contactMe": "Contact me"
+    }
+  }

@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Trans, useTranslation } from 'react-i18next';
 
 import DarkModeToggle from "react-dark-mode-toggle";
 
@@ -47,7 +48,15 @@ function checkBrowserThemePreference( setIsDarkMode : Function ) {
     }
 }
 
+const lngs = {
+    en: {nativeName: 'English'},
+    fin: {nativeName: 'Suomi'}
+};
+
 function Navigation() {
+    const {t, i18n} = useTranslation();
+
+
     const [isDarkMode, setIsDarkMode] = useState<boolean | undefined>( undefined );
     const [navIsOpen, setNavIsOpen] = useState( false );
 
@@ -76,24 +85,34 @@ function Navigation() {
                     <nav className="">
                         <div className="nav ">
                             <a className="navbar-brand" aria-current="page" href="#">
-                                <img width="50" src={logo} alt="portfolio logo" className="mx-auto"/>
+                                <img width="50" src={ logo } alt="portfolio logo" className="mx-auto"/>
                             </a>
                         </div>
                         <ul className="nav nav-list">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#about">About</a>
+                                <a className="nav-link active" aria-current="page" href="#about">
+                                    <Trans i18nKey="navigation.about"/>
+                                </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#projects">Projects</a>
+                                <a className="nav-link" href="#projects">
+                                    <Trans i18nKey="navigation.projects"/>
+                                </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#skills">Skills</a>
+                                <a className="nav-link" href="#skills">
+                                    <Trans i18nKey="navigation.skills"/>
+                                </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#contact">CV</a>
+                                <a className="nav-link" href="#contact">
+                                    <Trans i18nKey="navigation.cv"/>
+                                </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#contact">Contact me</a>
+                                <a className="nav-link" href="#contact">
+                                    <Trans i18nKey="navigation.contactMe"/>
+                                </a>
                             </li>
 
                         </ul>
@@ -106,10 +125,16 @@ function Navigation() {
                                     size={ 50 }
                                 />
                             </div>
-
                         </div>
                     </nav>
-
+                    <div className="nav">
+                        { Object.keys( lngs ).map( ( lng ) => (
+                            <button key={ lng } style={ {fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal'} }
+                                    type="submit" onClick={ () => i18n.changeLanguage( lng ) }>
+                                { lng }
+                            </button>
+                        ) ) }
+                    </div>
                 </div>
             </div>
 

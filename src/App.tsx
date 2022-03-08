@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
+
+import { useTranslation } from 'react-i18next';
+
+
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
@@ -7,11 +11,13 @@ import About from "./components/About";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 
+
+
 function App() {
 
     return (
-        <div  className="App">
-            <Navigation/>
+        <div className="App">
+            <Navigation />
             <main>
                 <Hero/>
                 <About/>
@@ -23,4 +29,13 @@ function App() {
     );
 }
 
-export default App;
+// here app catches the suspense from page in case translations are not yet loaded
+function WrappedApp() {
+    return (
+        <Suspense fallback="...is loading">
+            <App/>
+        </Suspense>
+    );
+}
+
+export default WrappedApp;
