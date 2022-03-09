@@ -48,7 +48,7 @@ function checkBrowserThemePreference( setIsDarkMode : Function ) {
     }
 }
 
-const lngs = {
+const languages = {
     en: {nativeName: 'English'},
     fin: {nativeName: 'Suomi'}
 };
@@ -127,13 +127,18 @@ function Navigation() {
                             </div>
                         </div>
                     </nav>
+
                     <div className="nav">
-                        { Object.keys( lngs ).map( ( lng ) => (
-                            <button key={ lng } style={ {fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal'} }
-                                    type="submit" onClick={ () => i18n.changeLanguage( lng ) }>
-                                { lng }
-                            </button>
-                        ) ) }
+                        { Object.keys( languages ).map( ( lng, index ) => {
+                            return (
+                                <small key={ lng } className="languages"
+                                       style={ {fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal', opacity: i18n.resolvedLanguage === lng ? '1' : '0.8'} }
+                                       onClick={ () => i18n.changeLanguage( lng ) }>
+                                    {lng}
+                                </small>
+                            )
+                            }
+                        ) }
                     </div>
                 </div>
             </div>

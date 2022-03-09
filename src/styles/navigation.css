@@ -132,3 +132,22 @@ nav {
     letter-spacing: 1.2px;
     color: rgba(241, 241, 241, 0.85);
 }
+
+.languages {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #f1f1f1;
+    padding: 0.2em 1em;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.5s ease-in-out ;
+}
+
+.languages:hover {
+    color: #252424;
+    opacity: 1;
+}
+
+.languages + .languages {
+    border-left: 2px solid #ffffff;
+}
