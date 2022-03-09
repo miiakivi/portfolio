@@ -82,7 +82,7 @@ function Navigation() {
                 </div>
 
                 <div className="nav-container">
-                    <nav className="">
+                    <nav>
                         <div className="nav ">
                             <a className="navbar-brand" aria-current="page" href="#">
                                 <img width="50" src={ logo } alt="portfolio logo" className="mx-auto"/>
@@ -114,32 +114,40 @@ function Navigation() {
                                     <Trans i18nKey="navigation.contactMe"/>
                                 </a>
                             </li>
-
                         </ul>
-                        <div className="nav">
+                        <div className="nav__extra">
+
                             <div className="dark-mode-toggle">
                                 <p>{ isDarkMode ? "dark" : "light" }</p>
+
                                 <DarkModeToggle
                                     onChange={ setIsDarkMode }
                                     checked={ isDarkMode }
                                     size={ 50 }
                                 />
+
                             </div>
+                            <div className="languages__container">
+                                { Object.keys( languages ).map( ( lng, index ) => {
+                                        return (
+                                            <small key={ lng } className="language"
+                                                   style={ {
+                                                       fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal',
+                                                       opacity: i18n.resolvedLanguage === lng ? '1' : '0.8'
+                                                   } }
+                                                   onClick={ () => i18n.changeLanguage( lng ) }>
+                                                { lng }
+                                            </small>
+                                        )
+                                    }
+                                ) }
+                            </div>
+
                         </div>
+
                     </nav>
 
-                    <div className="nav">
-                        { Object.keys( languages ).map( ( lng, index ) => {
-                            return (
-                                <small key={ lng } className="languages"
-                                       style={ {fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal', opacity: i18n.resolvedLanguage === lng ? '1' : '0.8'} }
-                                       onClick={ () => i18n.changeLanguage( lng ) }>
-                                    {lng}
-                                </small>
-                            )
-                            }
-                        ) }
-                    </div>
+
                 </div>
             </div>
 

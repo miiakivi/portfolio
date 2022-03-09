@@ -21,17 +21,17 @@
   "about": {
     "title": "Minusta",
     "subtitle": "Kukas minä olinkaan",
-    "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis nam omnis! At commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem ratione similique tempore, voluptatibus.",
-    "paragraph2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis nam omnis! At commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem ratione similique tempore, voluptatibus.",
-    "paragraph3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis nam omnis! At commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem ratione similique tempore, voluptatibus.",
-    "button": "Klikkaa minua"
+    "paragraph1": "Olen vastavalmistunut ohjelmistokehittäjä jolle hyvä käyttäjäkokemus ja helppolukuinen koodi on tärkeää jokaisessa projektissa. ",
+    "paragraph2": "Kun en istu läppärin edessä, suunnittelen seuraavaa reissukohdetta, käyn entisen katukoiran (nykyisen kotikoiran) kanssa lenkillä tai sometan instagramissa aivan liikaa. .",
+    "paragraph3": "Olen tällä hetkellä etsimässä itselleni ensimmäistä alan työpaikkaa. Tulevalta työpaikaltani toivoisin mukavaa ja kannustavaa työilmapiiriä ja etätyömahdollisuutta. Jos kiinnostuit tai muuten vaan haluat sanoa moikka, niin ota rohkeasti yhteyttä.",
+    "button": "Ota yhteyttä"
   },
   "projects": {
     "title": "Projektit",
     "subtitle": "Valikoima projekteja, joita olen rakentanut"
   },
   "projectDetails": {
-
+    "button": "Lue lisää"
   },
   "skills": {
     "title": "Taidot",

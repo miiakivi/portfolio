@@ -35,7 +35,7 @@
     text-align: center;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 800px) {
     .navigation-content {
         display: block;
         position: relative;
@@ -55,13 +55,11 @@
     .toggle-container {
         display: none;
     }
-
-
 }
 
 nav {
     width: 100%;
-    max-width: 1100px;
+    position: relative;
     font-family: 'Kanit', sans-serif;
     letter-spacing: 2px;
     font-weight: 400;
@@ -71,12 +69,15 @@ nav {
     padding: 1em;
     display: block;
 }
+.nav-list {
+    margin: 0 auto;
+}
 
-@media (min-width: 750px) {
+@media (min-width: 800px) {
     nav {
         display: flex;
-        justify-content: space-between;
         margin: 0 auto;
+        justify-content: space-between;
     }
 
     .nav {
@@ -84,11 +85,14 @@ nav {
         display: flex;
         align-items: flex-end;
     }
+
+
 }
 
 .navbar-brand {
     align-self: center;
     padding: 0;
+    margin: 0;
 }
 
 
@@ -99,9 +103,8 @@ nav {
     width: 100%;
     max-width: 150px;
     margin: 1em auto;
-    background:
-            linear-gradient(currentColor 0 0)
-            var(--p, 50%) 100% /var(--d, 10%) 3px no-repeat;
+    padding: 0.5em;
+    background: linear-gradient(currentColor 0 0) var(--p, 50%) 100% /var(--d, 10%) 3px no-repeat;
     transition: 0.3s, background-position 0s;
 }
 
@@ -112,11 +115,17 @@ nav {
     transition: 0.3s, background-size 0.3s 0.3s;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 800px) {
     .nav-item {
         margin: 0 1em;
     }
+
+    .nav-link {
+        margin: 1em 0.5em;
+
+    }
 }
+
 
 /* --- DARK MODE SWITCH ---  */
 
@@ -133,21 +142,26 @@ nav {
     color: rgba(241, 241, 241, 0.85);
 }
 
-.languages {
+.languages__container {
+    align-self: start;
+    margin-top: 1em;
+}
+
+.language {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: #f1f1f1;
     padding: 0.2em 1em;
     cursor: pointer;
     opacity: 0.8;
-    transition: all 0.5s ease-in-out ;
+    transition: all 0.5s ease-in-out;
 }
 
-.languages:hover {
+.language:hover {
     color: #252424;
     opacity: 1;
 }
 
-.languages + .languages {
+.language + .language {
     border-left: 2px solid #ffffff;
 }
