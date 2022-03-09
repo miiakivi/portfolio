@@ -5,6 +5,51 @@
     "skills": "Taidot",
     "cv": "cv",
     "contactMe": "Ota yhteyttä"
+  },
+  "hero": {
+    "title": "Hei, olen",
+    "subtitle": "Ohjelmistokehittäjä",
+    "and": "ja",
+    "words-animation": {
+      "word1": "reissaaja",
+      "word2": "kokki",
+      "word3": "optimisti",
+      "word4": "ukulelen soittaja"
+    },
+    "button": "ota yhteyttä"
+  },
+  "about": {
+    "title": "Minusta",
+    "subtitle": "Kukas minä olinkaan",
+    "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis nam omnis! At commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem ratione similique tempore, voluptatibus.",
+    "paragraph2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis nam omnis! At commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem ratione similique tempore, voluptatibus.",
+    "paragraph3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis nam omnis! At commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem ratione similique tempore, voluptatibus.",
+    "button": "Klikkaa minua"
+  },
+  "projects": {
+    "title": "Projektit",
+    "subtitle": "Valikoima projekteja, joita olen rakentanut"
+  },
+  "projectDetails": {
+
+  },
+  "skills": {
+    "title": "Taidot",
+    "subtitle": "Teknologioita mitä olen käyttänyt"
+  },
+  "footer": {
+    "lets": "jos kiinnostuit,",
+    "words-animation": {
+      "word1": "työskennellään yhdessä",
+      "word2": "tehdään yhteistyötä",
+      "word3": "tavataan Teamsissä",
+      "word4": "mennään lounaalle"
+    },
+    "cta": {
+      "part1": "Laita mulle ",
+      "part2": " Maili"
+    },
+    "socials-title": "tai muuten vaan sano moikka!"
   }
 }
 

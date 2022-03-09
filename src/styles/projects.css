@@ -24,6 +24,7 @@
     margin: 0 auto 2em;
     background-position: center;
     background-size: cover;
+    border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
 }
 
@@ -32,6 +33,7 @@
     height: 100%;
     opacity: 0.95;
     padding-top: 0.5em;
+    border-radius: 5px;
     background-color: var(--main-theme-color);
 }
 
@@ -44,7 +46,6 @@
     min-height: 100%;
     width: auto;
     height: auto;
-
 }
 
 .projects__item-overlay {
@@ -58,7 +59,7 @@
     overflow: hidden;
     background-color: var(--main-theme-color);
     color: #eaeaea;
-
+    border-radius: 0 0 5px 5px;
     transition: .65s cubic-bezier(0.85, -0.21, 0.27, 1.55);
 }
 
@@ -108,7 +109,10 @@
 .overlay__link {
     padding: 0.8em;
     color: #ffffff;
-    background-color: #ff5e9f;
+    background: linear-gradient(var(--secondary-theme-color) 0 0) left /var(--d, 100%) 100% no-repeat;
+    border: 2px solid var(--secondary-theme-color);
+    border-radius: 5px;
+
     text-decoration: none;
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
@@ -119,7 +123,7 @@
 }
 
 .overlay__link:hover {
-
-
+    --d: 0%;
+    color: var(--secondary-theme-color);
 }
 

@@ -1,12 +1,19 @@
 import React from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 function Skills() {
+    const {t, i18n} = useTranslation();
+
     return (
         <div id="skills" className="section-container">
             <div className="skills-container section">
                 <div className="section-header">
-                    <p className="section-subtitle">Technologies that I am familiar with</p>
-                    <h2 className="section-title">Skills</h2>
+                    <p className="section-subtitle">
+                        <Trans i18nKey="skills.subtitle"/>
+                    </p>
+                    <h2 className="section-title">
+                        <Trans i18nKey="skills.title"/>
+                    </h2>
                 </div>
                 <div className="icon-grid">
                     <div className="icon-grid__item">

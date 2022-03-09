@@ -18,7 +18,7 @@ function ProjectDetails( {project} : ProjectDetailsProps ) {
                     <h5>{ project.title }</h5>
                     <p>{ project.description }</p>
                     <div>
-                        <a className="overlay__link" href={ project.url }>
+                        <a className="overlay__link " href={ project.url }>
                             Learn more
                         </a>
                     </div>

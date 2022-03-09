@@ -23,7 +23,7 @@ footer {
     background: linear-gradient(currentColor 0 0) -20% 100%/var(--p, 10%) 3px no-repeat;
     transition: 0.5s 0.3s cubic-bezier(0, 1.25, 1, 1.8), background-size 0.3s;
     text-decoration: none;
-    color: #ff5e9f;
+    color: var(--secondary-theme-color);
 }
 
 .footer__cta a:hover {

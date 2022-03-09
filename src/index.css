@@ -14,6 +14,7 @@
     --theme-text-color: '';
     --project-overlay-color: '';
     --theme-footer-color: '';
+    --secondary-theme-color: #FF5E9F;
 }
 
 
@@ -59,13 +60,16 @@ img {
 
 button {
     padding: 0.5em 1.5em;
-    letter-spacing: 1px;
+    letter-spacing: 1.3px;
     font-size: 0.9rem;
+    font-weight: bolder;
     text-transform: uppercase;
     background-color: var(--theme-bg);
     transition: all 0.5s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     font-family: 'Kanit', sans-serif;
+    border-radius: 5px;
+
 }
 
 button:hover {
@@ -74,24 +78,26 @@ button:hover {
 
 .main-btn {
     border: 3px solid var(--main-theme-color);
-    color: #fff;
-    background: linear-gradient(var(--main-theme-color) 0 0) left /var(--d, 100%) 100% no-repeat;
+    color: var(--main-theme-color);
+    background: linear-gradient(var(--main-theme-color) 0 0) left /var(--d, 0%) 100% no-repeat;
 }
 
 .main-btn:hover {
-    --d: 0%;
-    color: var(--main-theme-color);
+    --d: 100%;
+    color: #f1f1f1;
 }
 
 .secondary-btn {
-    border: 3px solid #FF5E9F;
+    border: 3px solid var(--secondary-theme-color);
     color: #fff;
-    background: linear-gradient(#FF5E9F 0 0) left /var(--d, 100%) 100% no-repeat;
+    background: linear-gradient(var(--secondary-theme-color) 0 0) left /var(--d, 100%) 100% no-repeat;
 }
 
 .secondary-btn:hover {
     --d: 0%;
+    color: #fff;
 }
+
 
 /* --- GENERAL --- */
 
@@ -140,7 +146,7 @@ button:hover {
 .word-animation__word {
     display: block;
     padding-left: 10px;
-    color: #ff5e9f;
+    color: var(--secondary-theme-color);
     font-weight: 500;
     animation: spin_words 7s infinite;
 }

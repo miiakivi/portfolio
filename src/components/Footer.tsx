@@ -1,22 +1,42 @@
 import React from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 function Footer() {
+    const {t, i18n} = useTranslation();
+
     return (
         <footer id="contact">
             <div className="section">
                 <div className="word-animation-wrapper footer-animation">
-                    <p>Lets</p>
+                    <p>
+                        <Trans i18nKey="footer.lets"/>
+                    </p>
                     <div className="word-animation__words">
-                        <span className="word-animation__word">work together</span>
-                        <span className="word-animation__word">collaborate</span>
-                        <span className="word-animation__word">meet in teams</span>
-                        <span className="word-animation__word">have lunch</span>
-                        <span className="word-animation__word">work together</span>
+                        <span className="word-animation__word">
+                            <Trans i18nKey="footer.words-animation.word1"/>
+                        </span>
+                        <span className="word-animation__word">
+                            <Trans i18nKey="footer.words-animation.word2"/>
+                        </span>
+                        <span className="word-animation__word">
+                            <Trans i18nKey="footer.words-animation.word3"/>
+                        </span>
+                        <span className="word-animation__word">
+                            <Trans i18nKey="footer.words-animation.word4"/>
+                        </span>
+                        <span className="word-animation__word">
+                            <Trans i18nKey="footer.words-animation.word1"/>
+                        </span>
                     </div>
                 </div>
 
-                <h2 className="footer__cta">Drop me an <a href="#">Email </a></h2>
-                <p className="footer__socials-title">Or just say hi!</p>
+                <h2 className="footer__cta">
+                    <Trans i18nKey="footer.cta.part1"/>
+                    <a href="#"><Trans i18nKey="footer.cta.part2"/></a>
+                </h2>
+                <p className="footer__socials-title">
+                    <Trans i18nKey="footer.socials-title"/>
+                </p>
 
                 <div>
                     <div className="footer__socials">

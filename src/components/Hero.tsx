@@ -1,32 +1,51 @@
 import React from "react";
-/*
-*  <p className="hero__info">Software Developer</p>
-                    <p className="hero__info">and traveler || chef || dog servant || optimist || ukulele player ||
-                        huge Friends fan</p>
-* */
+import { Trans, useTranslation } from 'react-i18next';
+
 function Hero() {
+    const {t, i18n} = useTranslation();
+
     return (
         <div className="section-container">
             <div className="hero section">
                 <section className="hero__section">
-                    <h1 className="hero__title">Hi, I am <br/> <span>Miia Nyy</span></h1>
+                    <h1 className="hero__title">
+                        <Trans i18nKey="hero.title"/>
+                        <br/>
+                        <span>Miia Nyy</span>
+                    </h1>
                     <div className="hero__subtitle">
-                        <p>Software Developer</p>
+                        <p>
+                            <Trans i18nKey="hero.subtitle"/>
+                        </p>
                         <div className="word-animation-wrapper">
-                            <p>and</p>
+                            <p>
+                                <Trans i18nKey="hero.and"/>
+                            </p>
                             <div className="word-animation__words">
-                                <span className="word-animation__word">traveler</span>
-                                <span className="word-animation__word">chef</span>
-                                <span className="word-animation__word">optimist</span>
-                                <span className="word-animation__word">ukulele player</span>
-                                <span className="word-animation__word">traveler</span>
+                                <span className="word-animation__word">
+                                    <Trans i18nKey="hero.words-animation.word1"/>
+                                </span>
+                                <span className="word-animation__word">
+                                    <Trans i18nKey="hero.words-animation.word2"/>
+                                </span>
+                                <span className="word-animation__word">
+                                    <Trans i18nKey="hero.words-animation.word3"/>
+                                </span>
+                                <span className="word-animation__word">
+                                    <Trans i18nKey="hero.words-animation.word4"/>
+                                </span>
+                                <span className="word-animation__word">
+                                    <Trans i18nKey="hero.words-animation.word1"/>
+                                </span>
                             </div>
                         </div>
                     </div>
 
 
+                    <button className="main-btn">
+                        <Trans i18nKey="hero.button"/>
+                    </button>
 
-                    <button className="main-btn">Lets Talk</button>
                 </section>
             </div>
         </div>

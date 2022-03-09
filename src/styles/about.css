@@ -12,7 +12,7 @@
     letter-spacing: 2px;
     font-size: 0.8rem;
     font-style: italic;
-    background-color: #ff5e9f;
+    background-color: var(--secondary-theme-color);
     color: #dddddd;
     width: fit-content;
     margin: 0 auto 0.5em;
@@ -22,8 +22,6 @@
 .about {
     max-width: 900px;
 }
-
-
 
 .about__container {
     margin-top: 1em;

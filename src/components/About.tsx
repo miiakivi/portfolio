@@ -1,15 +1,22 @@
 import profileImg from "../assets/profile.jpg";
 import React from "react";
+import { Trans, useTranslation } from 'react-i18next';
 
 function About() {
+    const {t, i18n} = useTranslation();
+
     return (
         <>
 
             <div id="about" className="section-container dark__accent">
                 <section className="about section">
                     <div className="section-header">
-                        <p className="section-subtitle accent-subtitle">Who I am</p>
-                        <h2 className="section-title accent-title">About</h2>
+                        <p className="section-subtitle accent-subtitle">
+                            <Trans i18nKey="about.subtitle"/>
+                        </p>
+                        <h2 className="section-title accent-title">
+                            <Trans i18nKey="about.title"/>
+                        </h2>
                     </div>
                     <div className="about__container">
                         <div>
@@ -21,22 +28,19 @@ function About() {
                         </div>
                         <div className="about__container-item">
                             <p>
-                                <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis nam omnis!
-                                    At
-                                    commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem
-                                    ratione similique tempore, voluptatibus.
+                                <strong>
+                                    <Trans i18nKey="about.paragraph1"/>
                                 </strong>
                             </p>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis nam omnis! At
-                                commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem
-                                ratione similique tempore, voluptatibus.
+                            <p>
+                                <Trans i18nKey="about.paragraph2"/>
                             </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis nam omnis! At
-                                commodi corporis deleniti dicta eaque incidunt iste modi nobis odit quasi quia quidem
-                                ratione similique tempore, voluptatibus.
+                            <p>
+                                <Trans i18nKey="about.paragraph3"/>
                             </p>
-                            <button className="about__btn secondary-btn">Click me</button>
+                            <button className="about__btn secondary-btn">
+                                <Trans i18nKey="about.button"/>
+                            </button>
                         </div>
                     </div>
                 </section>

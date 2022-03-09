@@ -58,7 +58,7 @@ code {
 }
 
 .section-subtitle {
-    color: #FF5E9F;
+    color: var(--secondary-theme-color);
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;

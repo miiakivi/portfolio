@@ -1,17 +1,12 @@
 import React, { Suspense } from 'react';
 import './App.css';
 
-import { useTranslation } from 'react-i18next';
-
-
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
-
-
 
 function App() {
 
