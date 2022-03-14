@@ -154,7 +154,7 @@ nav {
     padding: 0.2em 1em;
     cursor: pointer;
     opacity: 0.8;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .language:hover {

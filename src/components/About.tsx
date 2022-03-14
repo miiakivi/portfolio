@@ -38,6 +38,11 @@ function About() {
                             <p>
                                 <Trans i18nKey="about.paragraph3"/>
                             </p>
+                            <p>
+                                <em style={{fontSize: '0.9rem'}}>
+                                    <Trans i18nKey="about.paragraph4"/>
+                                </em>
+                            </p>
                             <button className="about__btn secondary-btn">
                                 <Trans i18nKey="about.button"/>
                             </button>

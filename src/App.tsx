@@ -11,10 +11,8 @@ import Projects from "./components/Projects";
 import i18n from 'i18next';
 import { initReactI18next, useTranslation } from 'react-i18next';
 
-
 import translationEn from "./locales/en/translation";
 import translationFin from "./locales/fin/translation";
-
 
 i18n
     .use( initReactI18next ) //passes i18n down to react-i18next
@@ -45,6 +43,5 @@ function App() {
         </div>
     );
 }
-
 
 export default App;

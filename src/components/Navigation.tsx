@@ -54,10 +54,6 @@ function Navigation() {
     const [isDarkMode, setIsDarkMode] = useState<boolean | undefined>( undefined );
     const [navIsOpen, setNavIsOpen] = useState( false );
 
-    function changeLanguage(language : string) {
-        i18n.changeLanguage( language )
-            .then(() => console.log('language changed'))
-    }
 
     useEffect( () => {
         checkBrowserThemePreference( setIsDarkMode );
@@ -105,11 +101,6 @@ function Navigation() {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#contact">
-                                    <Trans i18nKey="navigation.cv"/>
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#contact">
                                     <Trans i18nKey="navigation.contactMe"/>
                                 </a>
                             </li>
@@ -127,33 +118,40 @@ function Navigation() {
 
                             </div>
                             <div className="languages__container">
-                                <small className="language"
-                                       style={ {
-                                           fontWeight: i18n.resolvedLanguage === 'en' ? 'bold' : 'normal',
-                                           opacity: i18n.resolvedLanguage === 'en' ? '1' : '0.8'
-                                       } }
-                                       onClick={ () => changeLanguage('en') }>
-                                    en
-                                </small>
-                                <small className="language"
-                                       style={ {
-                                           fontWeight: i18n.resolvedLanguage === 'fin' ? 'bold' : 'normal',
-                                           opacity: i18n.resolvedLanguage === 'fin' ? '1' : '0.8'
-                                       } }
-                                       onClick={ () => changeLanguage('fin') }>
-                                    fin
-                                </small>
-
+                                <LanguageBtn language={'en'}/>
+                                <LanguageBtn language={'fin'}/>
                             </div>
-
                         </div>
 
                     </nav>
                 </div>
             </div>
         </>
-
     );
+}
+
+interface LanguageBtnProps {
+    language : string
+}
+
+function LanguageBtn( {language} : LanguageBtnProps ) {
+    const {t, i18n} = useTranslation();
+
+    function changeLanguage( language : string ) {
+        i18n.changeLanguage( language )
+            .then( () => console.log( 'language changed' ) )
+    }
+
+    return (
+        <small className="language"
+               style={ {
+                   fontWeight: i18n.resolvedLanguage === language ? 'bold' : 'normal',
+                   opacity: i18n.resolvedLanguage === language ? '1' : '0.8'
+               } }
+               onClick={ () => changeLanguage( language ) }>
+            {language}
+        </small>
+    )
 }
 
 function openNavigation( navIsOpen : boolean | undefined ) {

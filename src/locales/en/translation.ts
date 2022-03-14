@@ -23,7 +23,9 @@ export default {
         "subtitle": "Who I am",
         "paragraph1": "I am a newly graduated software developer. User experience and writing clean accessible code matter to me. I sweat the details.",
         "paragraph2": "When I’m not sitting in front of a laptop, I’m either: planning my next travel destination, going out with my former stray dog (current house dog) for a run, or just spending too much time on Instagram.",
-        "paragraph3": "I am currently looking for my first job in the industry. I would like a nice and encouraging work atmosphere and the possibility to work remotely from my future workplace. If you are interested or otherwise just want to say hello, please feel free to contact me.",
+        "paragraph3": "I am currently looking for my first job in the industry. I would like a nice and encouraging work atmosphere and the possibility to work remotely from my future workplace.",
+        "paragraph4": "If you are interested or otherwise just want to say hello, please feel free to contact me.",
+
         "button": "Say hello"
     },
     "projects": {
