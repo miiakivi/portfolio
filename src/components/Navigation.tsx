@@ -48,17 +48,16 @@ function checkBrowserThemePreference( setIsDarkMode : Function ) {
     }
 }
 
-const languages = {
-    en: {nativeName: 'English'},
-    fin: {nativeName: 'Suomi'}
-};
-
 function Navigation() {
     const {t, i18n} = useTranslation();
 
-
     const [isDarkMode, setIsDarkMode] = useState<boolean | undefined>( undefined );
     const [navIsOpen, setNavIsOpen] = useState( false );
+
+    function changeLanguage(language : string) {
+        i18n.changeLanguage( language )
+            .then(() => console.log('language changed'))
+    }
 
     useEffect( () => {
         checkBrowserThemePreference( setIsDarkMode );
@@ -128,30 +127,30 @@ function Navigation() {
 
                             </div>
                             <div className="languages__container">
-                                { Object.keys( languages ).map( ( lng, index ) => {
-                                        return (
-                                            <small key={ lng } className="language"
-                                                   style={ {
-                                                       fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal',
-                                                       opacity: i18n.resolvedLanguage === lng ? '1' : '0.8'
-                                                   } }
-                                                   onClick={ () => i18n.changeLanguage( lng ) }>
-                                                { lng }
-                                            </small>
-                                        )
-                                    }
-                                ) }
+                                <small className="language"
+                                       style={ {
+                                           fontWeight: i18n.resolvedLanguage === 'en' ? 'bold' : 'normal',
+                                           opacity: i18n.resolvedLanguage === 'en' ? '1' : '0.8'
+                                       } }
+                                       onClick={ () => changeLanguage('en') }>
+                                    en
+                                </small>
+                                <small className="language"
+                                       style={ {
+                                           fontWeight: i18n.resolvedLanguage === 'fin' ? 'bold' : 'normal',
+                                           opacity: i18n.resolvedLanguage === 'fin' ? '1' : '0.8'
+                                       } }
+                                       onClick={ () => changeLanguage('fin') }>
+                                    fin
+                                </small>
+
                             </div>
 
                         </div>
 
                     </nav>
-
-
                 </div>
             </div>
-
-
         </>
 
     );

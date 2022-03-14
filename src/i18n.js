@@ -1,9 +1,8 @@
-
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
+import { DateTime } from 'luxon';
 
 i18n
     // i18next-http-backend
@@ -20,16 +19,25 @@ i18n
     .init({
         debug: true,
         fallbackLng: 'en',
+        ns: ['translation'],
+        "keySeparator": false,
+        "nsSeparator": false,
+        getAsync: false,
+        defaultNS: 'translation',
+        
+        backend: {
+            loadPath: "/locales/{{lng}}/{{ns}}.json",
+            crossDomain: false
+        },
         interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
-            // format: (value, format, lng) => { // legacy usage
-            //   if (value instanceof Date) {
-            //     return DateTime.fromJSDate(value).setLocale(lng).toLocaleString(DateTime[format])
-            //   }
-            //   return value;
-            // }
+            format: (value, format, lng) => {
+                if ( value instanceof Date ) {
+                    return DateTime.fromJSDate(value).setLocale(lng).toLocaleString(DateTime[format])
+                }
+                return value;
+            }
         }
-    });
-
+    }).then(r => console.log('initialized...'));
 
 export default i18n;

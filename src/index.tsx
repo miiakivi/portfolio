@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import './index.css';
-import WrappedApp from './App';
-import './i18n';
+
+
+import App from './App';
 
 
 ReactDOM.render(
     <React.StrictMode>
-        <WrappedApp/>
+        <Suspense fallback="...is loading">
+            <App/>
+        </Suspense>
     </React.StrictMode>,
     document.getElementById( 'root' )
 );

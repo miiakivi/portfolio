@@ -16,10 +16,16 @@ function Skills() {
                     </h2>
                 </div>
                 <div className="icon-grid">
+
                     <div className="icon-grid__item">
-                        <i className="devicon-nodejs-plain dev-icon"/>
-                        <p>nodejs</p>
+                        <div className="grid-item__front">
+                            <i className="devicon-nodejs-plain dev-icon"/>
+                            <p>nodejs</p>
+                        </div>
+                        <div className="grid-item__back">
+                        </div>
                     </div>
+
                     <div className="icon-grid__item">
                         <i className="devicon-html5-plain dev-icon"/>
                         <p>html5</p>
