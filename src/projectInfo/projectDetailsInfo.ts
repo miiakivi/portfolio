@@ -99,10 +99,7 @@ export default [
         text: {
             en: {
                 title: 'Azure chat bot',
-                description: `This project is part two of my inventory and Azure chat bot project. 
-            Projects idea was to create homepage where user can talk to the chat bot. Bot can answer questions about company but it main purpose is to connect user to the inventory.
-            Bot is created using Microsoft Azure Bot Services, mainly Azure Bot Composer and it is connected to QnA Maker Knowledge Base and Azures Language Understanding (LUIS).`,
-            },
+                description: `I created a chat bot using Microsoft Azure Bot Services. It is connected to QnA Maker Knowledge Base and Azures Language Understanding (LUIS). Bot can answer questions about company but it main purpose is to connect users to the inventory management.`},
             fin: {
                 title: 'Azure virtuaalinen avustaja',
                 description: 'Projektin idea oli luoda kotisivu, jossa käyttäjä voi keskustella chat-botin kanssa. Bot voi vastata yritystä koskeviin kysymyksiin, mutta sen päätarkoitus on yhdistää käyttäjä yrityksen inventaarion hallintaan. Botin kautta käyttäjä voi luoda uusia, poistaa tai muokata vanhoja tuotteita inventaariosta.\n' +

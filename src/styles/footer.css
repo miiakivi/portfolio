@@ -38,8 +38,14 @@ footer {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    max-width: 150px;
     margin: 0 auto;
+}
+
+@media (min-width: 650px) {
+    .footer__socials {
+        flex-direction: row;
+        gap: 2em;
+    }
 }
 
 .footer__socials-title {

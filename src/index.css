@@ -5,6 +5,7 @@
 @import "./styles/projects.css";
 @import "./styles/skills.css";
 @import "./styles/footer.css";
+@import "./styles/buttons.css";
 
 
 :root {
@@ -58,47 +59,6 @@ img {
     max-width: 100%;
 }
 
-button {
-    padding: 0.5em 1.5em;
-    letter-spacing: 1.3px;
-    font-size: 0.9rem;
-    font-weight: bolder;
-    text-transform: uppercase;
-    background-color: var(--theme-bg);
-    transition: all 0.5s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-    font-family: 'Kanit', sans-serif;
-    border-radius: 5px;
-
-}
-
-button:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
-}
-
-.main-btn {
-    border: 3px solid var(--main-theme-color);
-    color: var(--main-theme-color);
-    background: linear-gradient(var(--main-theme-color) 0 0) left /var(--d, 0%) 100% no-repeat;
-}
-
-.main-btn:hover {
-    --d: 100%;
-    color: #f1f1f1;
-}
-
-.secondary-btn {
-    border: 3px solid var(--secondary-theme-color);
-    color: #fff;
-    background: linear-gradient(var(--secondary-theme-color) 0 0) left /var(--d, 100%) 100% no-repeat;
-}
-
-.secondary-btn:hover {
-    --d: 0%;
-    color: #fff;
-}
-
-
 /* --- GENERAL --- */
 
 .c-container {
@@ -129,12 +89,21 @@ button:hover {
 }
 
 /* --- ANIMATIONS --- */
+
 .word-animation-wrapper {
-    height: 40px;
+    height: 30px;
     display: flex;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
+
+@media (min-width: 350px) {
+    .word-animation-wrapper {
+        height: 40px;
+        font-size: 1.5rem;
+    }
+}
+
 
 .word-animation__words {
     overflow: hidden;

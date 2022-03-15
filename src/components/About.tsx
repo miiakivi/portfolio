@@ -21,7 +21,6 @@ function About() {
                         <div>
                             <div className="about__img-container">
                                 <small>Miia Nyyssönen - est 1992</small>
-
                                 <img width={ 300 } src={ profileImg } alt="Miia's face"/>
                             </div>
                         </div>
@@ -42,9 +41,9 @@ function About() {
                                     <Trans i18nKey="about.paragraph4"/>
                                 </em>
                             </p>
-                            <button className="about__btn secondary-btn">
+                            <a className="btn about__btn secondary-btn" href="mailto:mi.nyyssonen@gmail.com?subject=Hello, I liked your portfolio&body=Hi, I liked your portfolio and would like to talk yo you about ...">
                                 <Trans i18nKey="about.button"/>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </section>

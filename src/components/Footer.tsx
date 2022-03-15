@@ -32,7 +32,9 @@ function Footer() {
 
                 <h2 className="footer__cta">
                     <Trans i18nKey="footer.cta.part1"/>
-                    <a href="#"><Trans i18nKey="footer.cta.part2"/></a>
+                    <a href="mailto:mi.nyyssonen@gmail.com?subject=Hello, I liked your portfolio&body=Hi, I liked your portfolio and would like to talk yo you about ...">
+                        <Trans i18nKey="footer.cta.part2"/>
+                    </a>
                 </h2>
                 <p className="footer__socials-title">
                     <Trans i18nKey="footer.socials-title"/>

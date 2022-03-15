@@ -11,7 +11,7 @@ function Hero() {
                     <h1 className="hero__title">
                         <Trans i18nKey="hero.title"/>
                         <br/>
-                        <span>Miia Nyy</span>
+                        <span>Miia Nyyssönen</span>
                     </h1>
                     <div className="hero__subtitle">
                         <p>
@@ -41,10 +41,9 @@ function Hero() {
                         </div>
                     </div>
 
-
-                    <button className="main-btn">
+                    <a className="btn main-btn" href="mailto:mi.nyyssonen@gmail.com?subject=Hello, I liked your portfolio&body=Hi, I liked your portfolio and would like to talk yo you about ...">
                         <Trans i18nKey="hero.button"/>
-                    </button>
+                    </a>
 
                 </section>
             </div>
