@@ -18,7 +18,7 @@ function changePageThemeColors( isDarkMode : boolean | undefined ) {
     } else {
         root.style.setProperty( '--main-theme-color', "rgb(128,8,254)" );
         root.style.setProperty( '--theme-bg', "#f6f2ff" );
-        root.style.setProperty( '--theme-bg-accent', "#eee8ff" );
+        root.style.setProperty( '--theme-bg-accent', " " );
         root.style.setProperty( '--theme-text-color', "#262b2f" );
         root.style.setProperty( '--project-overlay-color', "#8008FEC6" );
         root.style.setProperty( '--theme-footer-color', "#eee8ff" );

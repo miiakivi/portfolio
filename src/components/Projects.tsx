@@ -1,11 +1,9 @@
 import React from "react";
-import ProjectDetails from "./ProjectItem";
 
 import { Trans, useTranslation } from 'react-i18next';
+import ProjectDetails from "./ProjectDetails";
 
-
-import { battleships, cvMaker, weather, superchat, chatBot, inventory } from "../projectDetails/projects";
-
+import projects from "../projectInfo/projectDetailsInfo";
 function Projects() {
     const {t, i18n} = useTranslation();
 
@@ -22,14 +20,9 @@ function Projects() {
                 </div>
 
                 <div className="projects__flex">
-                    <ProjectDetails project={ chatBot }/>
-                    <ProjectDetails project={ battleships }/>
-                    <ProjectDetails project={ cvMaker }/>
-                    <ProjectDetails project={ weather }/>
-                    <ProjectDetails project={ inventory }/>
-                    <ProjectDetails project={ superchat }/>
-
-
+                    { projects.map( project  => {
+                        return <ProjectDetails project={ project }/>
+                    } ) }
                 </div>
             </div>
         </div>

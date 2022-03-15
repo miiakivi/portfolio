@@ -7,7 +7,6 @@ function About() {
 
     return (
         <>
-
             <div id="about" className="section-container dark__accent">
                 <section className="about section">
                     <div className="section-header">
@@ -50,7 +49,6 @@ function About() {
                     </div>
                 </section>
             </div>
-
         </>
     );
 }
