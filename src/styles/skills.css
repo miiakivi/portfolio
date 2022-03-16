@@ -1,6 +1,6 @@
 /* --- SKILLS --- */
 .skills-container {
-    max-width: 800px;
+    max-width: 800px !important;
 }
 
 .icon-grid {
@@ -9,7 +9,6 @@
     justify-content: center;
     gap: 1em;
     margin-top: 3em;
-    perspective: 600px;
 
 }
 
@@ -39,12 +38,6 @@
  * See http://animista.net/license for more info.
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation wobble-hor-bottom
- * ----------------------------------------
- */
 @-webkit-keyframes wobble-hor-bottom {
     0%,
     100% {
