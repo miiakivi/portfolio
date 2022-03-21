@@ -1,6 +1,7 @@
 /* --- PROJECTS ---*/
 
 .projects {
+    margin-bottom: 1rem !important;
 }
 
 .projects__flex {
@@ -127,6 +128,19 @@
 .overlay__link:hover {
     --d: 0%;
     color: #ffffff;
+}
 
+.projects__icon {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.projects__icon:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
 }
 

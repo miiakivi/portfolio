@@ -38,8 +38,13 @@ function Projects() {
 
                     } ) }
                 </div>
-                { !showAllProjects ? <button onClick={ () => setShowAllProjects( !showAllProjects ) }>
-                    Showall</button> : <></> }
+                <AnimationOnScroll animateOnce={ true } animateIn="animate__fadeInUp">
+
+                    { !showAllProjects ? <p><i onClick={ () => setShowAllProjects( !showAllProjects ) }
+                                               className="fa-solid fa-ellipsis projects__icon"/></p>
+                        : <></> }
+                </AnimationOnScroll>
+
             </div>
 
         </div>
