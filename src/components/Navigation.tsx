@@ -2,50 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Trans, useTranslation } from 'react-i18next';
 
 import DarkModeToggle from "react-dark-mode-toggle";
-
 import logo from "../assets/logo.png"
 
-function changePageThemeColors( isDarkMode : boolean | undefined ) {
-    const root = document.documentElement;
+import checkBrowserThemePreference from "../helpers/checkBrowserThemePreference";
+import changePageThemeColors from "../helpers/changePageTheme";
+import toggleNavigation from "../helpers/toggleNavigation";
 
-    if ( isDarkMode ) {
-        root.style.setProperty( '--main-theme-color', "#9c5ee1" );
-        root.style.setProperty( '--theme-bg', "#23252d" );
-        root.style.setProperty( '--theme-bg-accent', "#252b34" );
-        root.style.setProperty( '--theme-text-color', "#f1f1f1" );
-        root.style.setProperty( '--project-overlay-color', "rgba(156,94,225,0.85)" );
-        root.style.setProperty( '--theme-footer-color', "#1E1E1E" );
-    } else {
-        root.style.setProperty( '--main-theme-color', "rgb(128,8,254)" );
-        root.style.setProperty( '--theme-bg', "#f6f2ff" );
-        root.style.setProperty( '--theme-bg-accent', " " );
-        root.style.setProperty( '--theme-text-color', "#262b2f" );
-        root.style.setProperty( '--project-overlay-color', "#8008FEC6" );
-        root.style.setProperty( '--theme-footer-color', "#eee8ff" );
-    }
-}
+import LanguageBtn from "./LanguageBtn";
 
-// Check users browser preference and assign theme accordingly
-function checkBrowserThemePreference( setIsDarkMode : Function ) {
-    // Check to see if Media-Queries are supported
-    if ( window.matchMedia ) {
-        // Check if the dark-mode Media-Query matches
-        if ( window.matchMedia( '(prefers-color-scheme: dark)' ).matches ) {
-            // Dark
-            setIsDarkMode( true );
-            console.log( 'prefers dark mode' )
-
-        } else {
-            // Light
-            setIsDarkMode( false );
-            console.log( 'prefers light mode' )
-        }
-    } else {
-        // Default (when Media-Queries are not supported)
-        setIsDarkMode( false );
-        console.log( 'not preferences' )
-
-    }
+interface NavItemProps {
+    name : string;
 }
 
 function Navigation() {
@@ -65,17 +31,29 @@ function Navigation() {
         changePageThemeColors( isDarkMode );
     }, [isDarkMode] );
 
+    function NavItem( {name} : NavItemProps ) {
+        return (
+            <li className="nav-item">
+                <a onClick={ () => {
+                    setTimeout(() => toggleNavigation( navIsOpen ), 300);
+                    setNavIsOpen( ( prevValue ) => !prevValue );
+                } } className="nav-link active" aria-current="page" href={ `#${ name }` }>
+                    <Trans i18nKey={ `navigation.${ name }` }/>
+                </a>
+            </li>
+        )
+    }
+
     return (
         <>
             <div className="navigation-content">
                 <div className="toggle-container">
                     <i onClick={ () => {
-                        openNavigation( navIsOpen );
+                        toggleNavigation( navIsOpen );
                         setNavIsOpen( ( prevValue ) => !prevValue );
                     } }
                        className="fas fa-solid fa-angles-right nav__toggle-btn"/>
                 </div>
-
                 <div className="nav-container">
                     <nav>
                         <div className="nav ">
@@ -84,26 +62,10 @@ function Navigation() {
                             </a>
                         </div>
                         <ul className="nav nav-list">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#about">
-                                    <Trans i18nKey="navigation.about"/>
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#projects">
-                                    <Trans i18nKey="navigation.projects"/>
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#skills">
-                                    <Trans i18nKey="navigation.skills"/>
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#contact">
-                                    <Trans i18nKey="navigation.contactMe"/>
-                                </a>
-                            </li>
+                            <NavItem name="about"/>
+                            <NavItem name="projects"/>
+                            <NavItem name="skills"/>
+                            <NavItem name="contact"/>
                         </ul>
                         <div className="nav__extra">
 
@@ -118,61 +80,15 @@ function Navigation() {
 
                             </div>
                             <div className="languages__container">
-                                <LanguageBtn language={'en'}/>
-                                <LanguageBtn language={'fin'}/>
+                                <LanguageBtn language={ 'en' }/>
+                                <LanguageBtn language={ 'fin' }/>
                             </div>
                         </div>
-
                     </nav>
                 </div>
             </div>
         </>
     );
-}
-
-interface LanguageBtnProps {
-    language : string
-}
-
-function LanguageBtn( {language} : LanguageBtnProps ) {
-    const {t, i18n} = useTranslation();
-
-    function changeLanguage( language : string ) {
-        i18n.changeLanguage( language )
-            .then( () => console.log( 'language changed' ) )
-    }
-
-    return (
-        <small className="language"
-               style={ {
-                   fontWeight: i18n.resolvedLanguage === language ? 'bold' : 'normal',
-                   opacity: i18n.resolvedLanguage === language ? '1' : '0.8'
-               } }
-               onClick={ () => changeLanguage( language ) }>
-            {language}
-        </small>
-    )
-}
-
-function openNavigation( navIsOpen : boolean | undefined ) {
-    const navContent = document.querySelector<HTMLElement>( ".navigation-content" );
-    const navContainer = document.querySelector<HTMLElement>( ".nav-container" );
-    const toggleButton = document.querySelector<HTMLElement>( ".nav__toggle-btn" );
-
-    if ( !navContainer || !navContent || !toggleButton ) {
-        throw new ReferenceError( "Navigation element not found." );
-    }
-
-    navContainer.style.display = navIsOpen ? 'none' : 'block';
-
-    // Make nav content smaller or larger depending on is the nav already open or not
-    navContent.style.width = navIsOpen ? '50px' : '100%';
-    navContent.style.height = navIsOpen ? '50px' : '100%';
-    navContent.style.borderRadius = navIsOpen ? '0 10px 10px 0' : '0';
-    navContent.style.marginTop = navIsOpen ? '1em' : '0';
-
-    // Rotate toggle button
-    toggleButton.style.transform = navIsOpen ? 'rotate(360deg)' : 'rotate(180deg)';
 }
 
 export default Navigation;

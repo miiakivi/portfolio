@@ -3,8 +3,7 @@ export default {
         "about": "about",
         "projects": "projects",
         "skills": "skills",
-        "cv": "cv",
-        "contactMe": "Contact me"
+        "contact": "Contact me"
     },
     "hero": {
         "title": "Hi, I am",

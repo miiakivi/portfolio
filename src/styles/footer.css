@@ -37,7 +37,9 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 0.5em;
     width: 100%;
+    max-width: 150px;
     margin: 0 auto;
 }
 
@@ -45,6 +47,8 @@ footer {
     .footer__socials {
         flex-direction: row;
         gap: 2em;
+        max-width: 100%;
+
     }
 }
 
@@ -72,8 +76,9 @@ footer {
 .social-link:hover {
     color: var(--main-theme-color);
     --d: 100%;
-
 }
+
+
 
 .social-icon {
     color: var(--main-theme-color);

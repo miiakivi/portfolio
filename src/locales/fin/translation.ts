@@ -3,8 +3,7 @@ export default {
         "about": "Minusta",
         "projects": "projektit",
         "skills": "Taidot",
-        "cv": "cv",
-        "contactMe": "Ota yhteyttä"
+        "contact": "Ota yhteyttä"
     },
     "hero": {
         "title": "Hei, olen",
