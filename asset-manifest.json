@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.7187acb7.css",
-    "main.js": "/portfolio/static/js/main.5f230d57.js",
+    "main.css": "/portfolio/static/css/main.ffe91ae2.css",
+    "main.js": "/portfolio/static/js/main.1b08050e.js",
     "static/media/profile.jpg": "/portfolio/static/media/profile.294887ef889dbbd139ea.jpg",
     "static/media/battleshipProject.jpg": "/portfolio/static/media/battleshipProject.036528ad0acd7cb6b4fb.jpg",
     "static/media/azureProject.jpg": "/portfolio/static/media/azureProject.56c7434fb78918b268dc.jpg",
     "static/media/cvProject.jpg": "/portfolio/static/media/cvProject.8785125918854fae2310.jpg",
     "static/media/weatherProject.jpg": "/portfolio/static/media/weatherProject.43669bad5bff68a7e085.jpg",
     "static/media/superchatProject.jpg": "/portfolio/static/media/superchatProject.d59cdc0065e58292b814.jpg",
-    "static/media/inventoryProject.jpg": "/portfolio/static/media/inventoryProject.da0f3c46eb9c72545a25.jpg",
+    "static/media/inventoryProject.jpg": "/portfolio/static/media/inventoryProject.2d30c63bd1042924f909.jpg",
+    "static/media/portfolioProject.jpg": "/portfolio/static/media/portfolioProject.ba59eefbbfe8fb19a11e.jpg",
     "static/media/logo.png": "/portfolio/static/media/logo.7f2a0848348cc93eabe6.png",
     "index.html": "/portfolio/index.html",
-    "main.7187acb7.css.map": "/portfolio/static/css/main.7187acb7.css.map",
-    "main.5f230d57.js.map": "/portfolio/static/js/main.5f230d57.js.map"
+    "main.ffe91ae2.css.map": "/portfolio/static/css/main.ffe91ae2.css.map",
+    "main.1b08050e.js.map": "/portfolio/static/js/main.1b08050e.js.map"
   },
   "entrypoints": [
-    "static/css/main.7187acb7.css",
-    "static/js/main.5f230d57.js"
+    "static/css/main.ffe91ae2.css",
+    "static/js/main.1b08050e.js"
   ]
 }
