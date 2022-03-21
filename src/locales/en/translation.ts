@@ -37,7 +37,7 @@ export default {
     },
     "skills": {
         "title": "Skills",
-        "subtitle": "Technologies that I am familiar with"
+        "subtitle": "Technologies I am familiar with"
     },
     "footer": {
         "lets": "Let's",
