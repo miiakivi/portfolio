@@ -4,7 +4,6 @@ import { Trans, useTranslation } from 'react-i18next';
 
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-
 function About() {
     const {t, i18n} = useTranslation();
 

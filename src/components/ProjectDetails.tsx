@@ -44,7 +44,6 @@ function ProjectDetails( {project} : ProjectDetailsProps ) {
                 </div>
             </div>
         </AnimationOnScroll>
-
     );
 }
 

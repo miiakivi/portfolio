@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Trans, useTranslation } from 'react-i18next';
 import ProjectDetails from "./ProjectDetails";
@@ -9,12 +9,13 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 function Projects() {
     const {t, i18n} = useTranslation();
 
+    const [showAllProjects, setShowAllProjects] = useState( false );
+
     return (
         <div id="projects" className="section-container light__accent">
 
             <div className="projects section">
                 <AnimationOnScroll animateOnce={ true } animateIn="animate__fadeInUp">
-
                     <div className="section-header">
                         <p className="section-subtitle">
                             <Trans i18nKey="projects.subtitle"/>
@@ -26,10 +27,19 @@ function Projects() {
                 </AnimationOnScroll>
 
                 <div className="projects__flex">
-                    { projects.map( project => {
-                        return <ProjectDetails project={ project }/>
+                    { projects.map( ( project, index ) => {
+                        if ( showAllProjects ) { // Show all projects in the projects array
+                            return <ProjectDetails project={ project }/>
+                        } else {
+                            if ( index <= 5 ) { // Show only first 6
+                                return <ProjectDetails project={ project }/>
+                            }
+                        }
+
                     } ) }
                 </div>
+                { !showAllProjects ? <button onClick={ () => setShowAllProjects( !showAllProjects ) }>
+                    Showall</button> : <></> }
             </div>
 
         </div>

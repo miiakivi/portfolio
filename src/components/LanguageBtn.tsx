@@ -4,7 +4,7 @@ import React from "react";
 interface LanguageBtnProps {
     language : string
 }
-
+// Changes pages language. Fin or eng
 function LanguageBtn( {language} : LanguageBtnProps ) {
     const {t, i18n} = useTranslation();
 
