@@ -26,7 +26,7 @@ function Projects() {
                     </div>
                 </AnimationOnScroll>
 
-                <div className="projects__flex">
+                <div className="projects__grid mt-4">
                     { projects.map( ( project, index ) => {
                         if ( showAllProjects ) { // Show all projects in the projects array
                             return <ProjectDetails project={ project }/>

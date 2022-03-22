@@ -12,7 +12,7 @@ function SkillIcon( {skill} : SkillIconProps ) {
     return (
         <AnimationOnScroll animateOnce={ true } animateIn="animate__fadeInUp">
             <div className="icon-grid__item">
-                <i className={ `${ skill.icon } dev-icon` }/>
+                <i className={ `${ skill.icon } icon-grid__item-icon` }/>
                 <p>{ skill.name }</p>
             </div>
         </AnimationOnScroll>

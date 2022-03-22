@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { Trans, useTranslation } from "react-i18next";
-import skills from "../data/skills";
+import skills from "../data/skillsIcons";
 import SkillIcon from "./SkillIcon";
 
 function Skills() {

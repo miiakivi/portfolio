@@ -4,12 +4,8 @@
     margin-bottom: 1rem !important;
 }
 
-.projects__flex {
-    margin-top: 3em;
-}
-
 @media (min-width: 900px) {
-    .projects__flex {
+    .projects__grid {
         display: grid;
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(2, 1fr);
@@ -28,7 +24,6 @@
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
 }
-
 
 .projects__item:hover .projects__item-overlay {
     height: 100%;

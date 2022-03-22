@@ -45,6 +45,7 @@ body {
     position: relative;
     min-height: 100vh;
     margin: 0;
+    text-align: center;
     line-height: 1.6;
     color: var(--theme-text-color);
     background-color: var(--theme-bg);

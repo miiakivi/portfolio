@@ -32,7 +32,7 @@ function ProjectDetails( {project} : ProjectDetailsProps ) {
             <div style={ {backgroundImage: `url(${ project.image })`} } className="projects__item">
 
                 <div className="projects__item-overlay">
-                    <div className="overlay__text">
+                    <div className="overlay__text ">
                         <h5>{ projectText.title }</h5>
                         <p>{ projectText.description }</p>
                         <div className="mt-4">
