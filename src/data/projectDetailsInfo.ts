@@ -6,7 +6,7 @@ import inventoryImage from "../assets/inventoryProject.jpg";
 import azureImage from "../assets/azureProject.jpg";
 import portfolioImage from "../assets/portfolioProject.jpg";
 
-export default [
+const projectDetails = [
     {
         image: azureImage,
         url: 'https://github.com/MiiaNyy/ramses-the-chat-bot',
@@ -65,8 +65,8 @@ export default [
             en: {
                 title: 'cv Maker',
                 description: `A deep dive into React and React Hooks. In the app, user can create their own CV by filling different
-           form components. All information provided by the 
-           user is stored in local storage. If the user wants to later add new information or add new sections to the CV, they don't need to start from scratch.`,
+                    form components. All information provided by the 
+                    user is stored in local storage. If the user wants to later add new information or add new sections to the CV, they don't need to start from scratch.`,
             }, fin: {
                 title: 'CV maker',
                 description: 'Syvä sukellus Reactiin ja React Hooksien käyttöön. Sovelluksessa käyttäjä voi' +
@@ -123,8 +123,9 @@ The animations are created using the react-animation-on-scroll package and Engli
             }
         }
     },
-
 ];
+
+export default projectDetails;
 
 
 

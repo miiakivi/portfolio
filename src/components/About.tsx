@@ -1,12 +1,9 @@
 import profileImg from "../assets/profile.jpg";
-import React from "react";
-import { Trans, useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 function About() {
-    const {t, i18n} = useTranslation();
-
     return (
         <>
             <div id="about" className="section-container dark__accent">
@@ -26,28 +23,22 @@ function About() {
                             <div>
                                 <div className="about__img-container">
                                     <small>Miia Nyyssönen - est 1992</small>
-                                    <img width={ 300 } src={ profileImg } alt="Miia's profile picture"/>
+                                    <img width={ 300 } src={ profileImg } alt="Miia's profile"/>
                                 </div>
                             </div>
                             <div className="about__container-item">
                                 <p>
-                                    <strong>
-                                        <Trans i18nKey="about.paragraph1"/>
-                                    </strong>
+                                    <strong><Trans i18nKey="about.paragraph1"/></strong>
                                 </p>
-                                <p>
-                                    <Trans i18nKey="about.paragraph2"/>
-                                </p>
-                                <p>
-                                    <Trans i18nKey="about.paragraph3"/>
-                                </p>
+                                <p><Trans i18nKey="about.paragraph2"/></p>
+                                <p><Trans i18nKey="about.paragraph3"/></p>
                                 <p>
                                     <em style={ {fontSize: '0.9rem'} }>
                                         <Trans i18nKey="about.paragraph4"/>
                                     </em>
                                 </p>
                                 <a className="btn about__btn secondary-btn"
-                                   href="mailto:mi.nyyssonen@gmail.com?subject=Hello, I liked your portfolio&body=Hi, I liked your portfolio and would like to talk yo you about ...">
+                                  href="mailto:mi.nyyssonen@gmail.com?subject=Hello, I liked your portfolio&body=Hi, I liked your portfolio and would like to talk yo you about ...">
                                     <Trans i18nKey="about.button"/>
                                 </a>
                             </div>

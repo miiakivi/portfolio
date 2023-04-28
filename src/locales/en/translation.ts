@@ -1,10 +1,16 @@
 export default {
-    "navigation": {
-        "about": "about",
-        "projects": "projects",
-        "skills": "skills",
-        "contact": "Contact me"
-    },
+  "_navigation": {
+    "about": "about",
+    "projects": "projects",
+    "skills": "skills",
+    "contact": "Contact me"
+  },
+  get "navigation"() {
+    return this["_navigation"];
+  },
+  set "navigation"(value) {
+    this["_navigation"] = value;
+  },
     "hero": {
         "title": "Hi, I am",
         "subtitle": "Software Developer",

@@ -1,4 +1,4 @@
-export default [
+const skillsIcons = [
     {
         name: "javascript",
         icon: "devicon-javascript-plain"
@@ -80,3 +80,5 @@ export default [
         icon: "devicon-canva-original",
     },
 ];
+
+export default skillsIcons;
