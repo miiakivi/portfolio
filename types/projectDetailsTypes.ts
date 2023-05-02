@@ -3,6 +3,7 @@ export interface ProjectDetails {
     image: string;
     url: string;
     text: ProjectDetailsText;
+    favorite?: boolean;
   };
 }
 
