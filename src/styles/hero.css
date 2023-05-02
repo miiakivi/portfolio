@@ -1,4 +1,3 @@
-
 /* --- HERO --- */
 
 .hero {
@@ -6,17 +5,17 @@
 }
 
 .hero__section {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .hero__subtitle {
-    box-sizing: content-box;
-    color: var(--theme-text-color);
-    font-size: 1.7rem;
-    text-align: center;
-    margin-bottom: 2em;
+  box-sizing: content-box;
+  color: var(--theme-text-color);
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 2em;
 }
 
 .hero__subtitle p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
