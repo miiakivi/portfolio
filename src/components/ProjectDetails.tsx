@@ -49,7 +49,14 @@ function ProjectDetails( { project }: ProjectDetailsProps ) {
   );
 }
 
+function Star( favoriteProject: boolean ) {
+  if ( favoriteProject ) {
+    return (
+      <div className="star">
+        <span>#1</span>
+      </div>
     );
+  }
   return <></>;
 }
 

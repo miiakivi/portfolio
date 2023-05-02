@@ -12,6 +12,34 @@
     gap: 40px;
   }
 }
+
+.star {
+  display: flex;
+  padding: 1.75rem;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -25px;
+  left: -15px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff14d;
+  color: black;
+  font-weight: 600;
+  clip-path: polygon(
+    50% 0%,
+    62% 38%,
+    100% 38%,
+    69% 59%,
+    82% 100%,
+    50% 75%,
+    18% 100%,
+    31% 59%,
+    0% 38%,
+    38% 38%
+  );
+  z-index: 1;
+  border: 1px solid #f63434;
 }
 
 .projects__item {
