@@ -15,6 +15,7 @@ function ProjectDetails( { project }: ProjectDetailsProps ) {
         style={{ backgroundImage: `url(${project.image})` }}
         className="projects__item"
       >
+        <Star favorite={project.favorite}></Star>
         <div className="projects__item-overlay">
           <div className="overlay__text ">
             <h5>{projectText.title}</h5>
@@ -31,8 +32,12 @@ function ProjectDetails( { project }: ProjectDetailsProps ) {
   );
 }
 
-function Star( favoriteProject: boolean ) {
-  if ( favoriteProject ) {
+interface StarProps {
+  favorite: boolean | undefined;
+}
+
+function Star( { favorite }: StarProps ) {
+  if ( favorite ) {
     return (
       <div className="star">
         <span>#1</span>
