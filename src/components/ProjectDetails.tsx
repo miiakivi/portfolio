@@ -1,25 +1,7 @@
-import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { Trans, useTranslation } from "react-i18next";
 
-interface ProjectDetailsLanguages {
-  en: {
-    title: string;
-    description: string;
-  };
-  fin: {
-    title: string;
-    description: string;
-  };
-}
-
-interface ProjectDetailsProps {
-  project: {
-    image: string;
-    url: string;
-    text: ProjectDetailsLanguages;
-  };
-}
+import type { ProjectDetails as ProjectDetailsProps } from "../../types";
 
 function ProjectDetails( { project }: ProjectDetailsProps ) {
   const { t, i18n } = useTranslation();

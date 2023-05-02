@@ -23,18 +23,6 @@ function Projects() {
           </div>
         </AnimationOnScroll>
 
-        <div className="star-container">
-          <div className="star">
-            <span className="number">1</span>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
-            error. Nemo porro dolores impedit veritatis. Omnis iusto, ab,
-            quaerat dolore porro fugit libero quo harum labore eligendi dolorum
-            debitis sunt.
-          </p>
-        </div>
-
         <div className="projects__grid mt-4">
           {projects.map( ( project, index ) => {
             if ( showAllProjects || index <= 5 ) {

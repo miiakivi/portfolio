@@ -1,45 +1,44 @@
-import React, { useEffect, useState } from 'react';
-import { Trans, useTranslation } from 'react-i18next';
+import { useEffect, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
-import DarkModeToggle from 'react-dark-mode-toggle';
-import logo from '../assets/logo.png';
+import DarkModeToggle from "react-dark-mode-toggle";
+import logo from "../assets/logo.png";
 
-import checkBrowserThemePreference from '../helpers/checkBrowserThemePreference';
-import changePageThemeColors from '../helpers/changePageTheme';
-import toggleNavigation from '../helpers/toggleNavigation';
+import checkBrowserThemePreference from "../helpers/checkBrowserThemePreference";
+import changePageThemeColors from "../helpers/changePageTheme";
+import toggleNavigation from "../helpers/toggleNavigation";
 
-import LanguageBtn from './LanguageBtn';
+import LanguageBtn from "./LanguageBtn";
 
-interface NavItemProps {
-  name: string;
-}
+import type { NavItem as NavItemProps } from "../../types";
 
 function Navigation() {
   const { t, i18n } = useTranslation();
 
-  const [isDarkMode, setIsDarkMode] = useState<boolean | undefined>(undefined);
-  const [navIsOpen, setNavIsOpen] = useState(false);
+  const [ isDarkMode, setIsDarkMode ] = useState<boolean | undefined>( undefined );
+  const [ navIsOpen, setNavIsOpen ] = useState( false );
 
-  useEffect(() => {
-    checkBrowserThemePreference(setIsDarkMode);
-  }, []);
+  useEffect( () => {
+    checkBrowserThemePreference( setIsDarkMode );
+  }, [] );
 
   // When theme state changes, change pages color scheme as well
-  useEffect(() => {
-    changePageThemeColors(isDarkMode);
-  }, [isDarkMode]);
+  useEffect( () => {
+    changePageThemeColors( isDarkMode );
+  }, [ isDarkMode ] );
 
-  function NavItem({ name }: NavItemProps) {
+  function NavItem( { name }: NavItemProps ) {
     return (
       <li className="nav-item">
         <a
           onClick={() => {
-            setTimeout(() => toggleNavigation(navIsOpen), 300);
-            setNavIsOpen((prevValue) => !prevValue);
+            setTimeout( () => toggleNavigation( navIsOpen ), 300 );
+            setNavIsOpen( ( prevValue ) => !prevValue );
           }}
           className="nav-link active"
           aria-current="page"
-          href={`#${name}`}>
+          href={`#${name}`}
+        >
           <Trans i18nKey={`navigation.${name}`} />
         </a>
       </li>
@@ -52,8 +51,8 @@ function Navigation() {
         <div className="toggle-container">
           <i
             onClick={() => {
-              toggleNavigation(navIsOpen);
-              setNavIsOpen((prevValue) => !prevValue);
+              toggleNavigation( navIsOpen );
+              setNavIsOpen( ( prevValue ) => !prevValue );
             }}
             className="fas fa-solid fa-angles-right nav__toggle-btn"
           />
@@ -78,7 +77,7 @@ function Navigation() {
             </ul>
             <div className="nav__extra">
               <div className="dark-mode-toggle">
-                <p>{isDarkMode ? 'dark' : 'light'}</p>
+                <p>{isDarkMode ? "dark" : "light"}</p>
 
                 <DarkModeToggle
                   onChange={setIsDarkMode}
@@ -87,8 +86,8 @@ function Navigation() {
                 />
               </div>
               <div className="languages__container">
-                <LanguageBtn language={'en'} />
-                <LanguageBtn language={'fin'} />
+                <LanguageBtn language={"en"} />
+                <LanguageBtn language={"fin"} />
               </div>
             </div>
           </nav>
