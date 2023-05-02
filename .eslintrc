@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "react"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "array-bracket-spacing": ["error", "always"],
+    "space-in-parens": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "arrow-spacing": "error",
+    "switch-colon-spacing": "error",
+    "space-infix-ops": "error"
+  }
+}

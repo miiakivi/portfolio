@@ -39,8 +39,7 @@ function Navigation() {
           }}
           className="nav-link active"
           aria-current="page"
-          href={`#${name}`}
-        >
+          href={`#${name}`}>
           <Trans i18nKey={`navigation.${name}`} />
         </a>
       </li>
