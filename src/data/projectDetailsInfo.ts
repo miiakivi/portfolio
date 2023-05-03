@@ -25,6 +25,22 @@ const projectDetails = [
     }
   },
   {
+    image: portfolioImage,
+    url: "https://github.com/MiiaNyy/portfolio",
+    text: {
+      en: {
+        title: "Portfolio",
+        description:
+          "To help with my work search, I created this portfolio project. I build it using React, Typescript, Bootstrap, and CSS. I wanted the portfolio to be quite simple but full of details and animations. The animations are created using the react-animation-on-scroll package and English and finish translations are created using the i18next."
+      },
+      fin: {
+        title: "Portfolio",
+        description:
+          "Työnhaun avuksi loin tämän portfolion  Reactin, Typescriptin, Bootstrapin ja CSS:n avulla. Halusin portfolion olevan melko yksinkertainen, mutta täynnä yksityiskohtia ja animaatioita. Osa animaatioista on luotu react-animation-on-scroll -paketin avulla  ja englanninkieliset ja suomalaiset käännökset on luotu i18nextillä."
+      }
+    }
+  },
+  {
     image: azureImage,
     url: "https://github.com/MiiaNyy/ramses-the-chat-bot",
 
@@ -102,22 +118,6 @@ const projectDetails = [
         title: "chatti appi",
         description:
           "Chat sovellus, mikä on rakennettu Firebasen avulla. Käytin projektissa Firestore tietokantaa, Firebase Storagea ja Googlen todennusta. Sovelluksessa käyttäjät kirjautuvat Googlen tunnuksilla palveluun minkä jälkeen he voivat lähettää teksti- ja kuvaviestejä muille online-käyttäjille."
-      }
-    }
-  },
-  {
-    image: portfolioImage,
-    url: "https://github.com/MiiaNyy/portfolio",
-    text: {
-      en: {
-        title: "Portfolio",
-        description:
-          "To help with my work search, I created this portfolio project. I build it using React, Typescript, Bootstrap, and CSS. I wanted the portfolio to be quite simple but full of details and animations. The animations are created using the react-animation-on-scroll package and English and finish translations are created using the i18next."
-      },
-      fin: {
-        title: "Portfolio",
-        description:
-          "Työnhaun avuksi loin tämän portfolion  Reactin, Typescriptin, Bootstrapin ja CSS:n avulla. Halusin portfolion olevan melko yksinkertainen, mutta täynnä yksityiskohtia ja animaatioita. Osa animaatioista on luotu react-animation-on-scroll -paketin avulla  ja englanninkieliset ja suomalaiset käännökset on luotu i18nextillä."
       }
     }
   }

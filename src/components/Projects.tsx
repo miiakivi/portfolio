@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 import { Trans } from "react-i18next";
@@ -26,7 +27,7 @@ function Projects() {
         <div className="projects__grid mt-4">
           {projects.map( ( project, index ) => {
             if ( showAllProjects || index <= 5 ) {
-              return <ProjectDetails project={project} />;
+              return <ProjectDetails project={project} key={index} />;
             }
             return <></>;
           } )}

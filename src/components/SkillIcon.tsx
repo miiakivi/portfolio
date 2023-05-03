@@ -1,3 +1,4 @@
+import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 import type { SkillIcon as SkillIconProps } from "../../types";
