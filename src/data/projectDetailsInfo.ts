@@ -15,7 +15,7 @@ const projectDetails = [
       en: {
         title: "battleships",
         description:
-          "Game created with React and Webpack. Classic battleships game where the user plays against AI. The whole game loop and players are created using JavaScript objects and classes. This was also my first touch using TDD."
+          "This classic battleships game was built using React and Webpack, and features an AI opponent for the player to compete against. Throughout the development process, I focused on utilizing JavaScript objects and classes to create the game loop and player interactions. With TDD, I was able to thoroughly test the functionality of the Player, Ship, and Gameboard classes before integrating them into the game loop. ⭐️ My favorite project "
       },
       fin: {
         title: "Battleships",
@@ -31,7 +31,7 @@ const projectDetails = [
       en: {
         title: "Portfolio",
         description:
-          "To help with my work search, I created this portfolio project. I build it using React, Typescript, Bootstrap, and CSS. I wanted the portfolio to be quite simple but full of details and animations. The animations are created using the react-animation-on-scroll package and English and finish translations are created using the i18next."
+          "As I started searching new work opportunities, I wanted to enhance my online presence and decided to create a portfolio project to showcase my skills and experience. Using a combination of React, Typescript, Bootstrap, and CSS, featuring animations using the react-animation-on-scroll package and English and Finnish translations with the i18next library I developed a simple and informative portfolio that highlights my abilities and accomplishments."
       },
       fin: {
         title: "Portfolio",
@@ -48,7 +48,7 @@ const projectDetails = [
       en: {
         title: "Azure chat bot",
         description:
-          "I created a chat bot using Microsoft Azure Bot Services. It is connected to QnA Maker Knowledge Base and Azures Language Understanding (LUIS). Bot can answer questions about company but it main purpose is to connect users to the inventory management."
+          "Using Microsoft Azure Bot Services, I developed a chatbot that not only connects users to the (imaginary) company's inventory management system, but also provides quick answers to frequently asked questions. The chatbot is integrated with the QnA Maker Knowledge Base and Azure's Language Understanding (LUIS) service to enhance its functionality and responsiveness."
       },
       fin: {
         title: "Azure virtuaalinen avustaja",
@@ -64,12 +64,12 @@ const projectDetails = [
       en: {
         title: "Inventory manager",
         description:
-          "Inventory application where I practiced MVC architecture using Node.js Express as backend and MongoDB as database. The app allows users to browse the entire inventory of the company or find specific items according to different categories; price, species, or size of the item. App is created from fully dynamic pages using Handlebars."
+          "For my inventory application project, I utilized the Model-View-Controller (MVC) architecture in conjunction with Node.js Express as the backend and MongoDB as the database. The app offers a range of features that make it easy for users to browse the entire inventory of the company or search for specific items based on different categories such as price, species, or size. The app's dynamic pages created using Handlebars contribute to its user-friendliness and effectiveness. "
       },
       fin: {
         title: "inventaario sovellus",
         description:
-          "Inventaario sovellus, jossa harjoittelin MVC-arkkitehtuuria. Rakensin sovelluksen käyttäen Node.js Expressiä backend puolella ja MongoDB:tä tietokantana. Sovelluksen avulla käyttäjät voivat selata yrityksen koko varastoa tai löytää tiettyjä kohteita eri luokkien mukaan. . Sovellus on luotu täysin dynaamisista sivuista Handlebars:n avulla"
+          "Inventaario sovellus, jossa harjoittelin MVC-arkkitehtuuria. Rakensin sovelluksen käyttäen Node.js Expressiä backend puolella ja MongoDB:tä tietokantana. Sovelluksen avulla käyttäjät voivat selata yrityksen koko varastoa tai löytää tiettyjä kohteita eri luokkien mukaan. Sovellus on luotu täysin dynaamisista sivuista Handlebars:n avulla"
       }
     }
   },
@@ -80,7 +80,7 @@ const projectDetails = [
       en: {
         title: "cv Maker",
         description:
-          "A deep dive into React and React Hooks. In the app, user can create their own CV by filling different form components. All information provided by the user is stored in local storage. If the user wants to later add new information or add new sections to the CV, they don't need to start from scratch."
+          "Practising React and React Hooks, I delved deeply into the workings of these powerful tools to create a user-friendly app that allows users to create their own CV by filling different form components. All information provided by the user is stored in local storage, allowing for easy retrieval and modification at a later time."
       },
       fin: {
         title: "CV maker",
@@ -96,7 +96,7 @@ const projectDetails = [
       en: {
         title: "weather forecast",
         description:
-          "Using REST API from open weather map users can search current weather info and 5-day forecast for specific location.The goal of this project was to get more familiar with REST APIs and asynchronous javascript. I used the ES6 async/await and fetch() method to fetch resources asynchronously across the network and get responses from API."
+          "This project utilizes REST APIs from open weather map to enable users to search for current weather information and 5-day forecasts for specific locations. The project focused on improving my proficiency in asynchronous JavaScript and the use of modern JavaScript techniques such as async/await and fetch() methods. Overall, this project showcases my ability to create user-friendly solutions utilizing REST APIs and modern JavaScript techniques."
       },
       fin: {
         title: "sään ennustaja",
@@ -112,7 +112,7 @@ const projectDetails = [
       en: {
         title: "super chat",
         description:
-          "Chat application build using Firebase, Firestore database and Firebase Storage services, Google authentication. In app users have to sign in to send and receive text and image messages to other online users."
+          "Chat application that utilized Firebase, Firestore database, Firebase Storage services, and Google authentication to enable users to sign in and send/receive text and image messages to other online users. This project demonstrates my proficiency in creating efficient and secure web applications that prioritize real-time communication and user-friendly features."
       },
       fin: {
         title: "chatti appi",
