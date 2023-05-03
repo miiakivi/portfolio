@@ -4,14 +4,18 @@ import { Trans, useTranslation } from "react-i18next";
 
 import type { ProjectDetails as ProjectDetailsProps } from "../../types";
 
-function ProjectDetails( { project }: ProjectDetailsProps ) {
+function ProjectDetails( { project, index }: ProjectDetailsProps ) {
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.resolvedLanguage;
   const projectText =
     currentLanguage === "en" ? project.text.en : project.text.fin;
 
   return (
-    <AnimationOnScroll animateOnce={true} animateIn="animate__fadeInUp">
+    <AnimationOnScroll
+      animateOnce={true}
+      delay={index * 35}
+      animateIn="animate__fadeInUp"
+    >
       <div
         style={{ backgroundImage: `url(${project.image})` }}
         className="projects__item"

@@ -27,7 +27,9 @@ function Projects() {
         <div className="projects__grid mt-4">
           {projects.map( ( project, index ) => {
             if ( showAllProjects || index <= 5 ) {
-              return <ProjectDetails project={project} key={index} />;
+              return (
+                <ProjectDetails project={project} index={index} key={index} />
+              );
             }
             return <></>;
           } )}

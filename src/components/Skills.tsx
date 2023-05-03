@@ -23,7 +23,7 @@ function Skills() {
 
         <div className="icon-grid">
           {skills.map( ( skill, index ) => {
-            return <SkillIcon skill={skill} key={index} />;
+            return <SkillIcon skill={skill} delay={index} key={index} />;
           } )}
         </div>
       </div>

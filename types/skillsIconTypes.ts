@@ -3,4 +3,5 @@ export interface SkillIcon {
     name: string;
     icon: string;
   };
+  delay: number;
 }
