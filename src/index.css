@@ -1,11 +1,11 @@
-@import './styles/typography.css';
-@import './styles/navigation.css';
-@import './styles/hero.css';
-@import './styles/about.css';
-@import './styles/projects.css';
-@import './styles/skills.css';
-@import './styles/footer.css';
-@import './styles/buttons.css';
+@import "./styles/typography.css";
+@import "./styles/navigation.css";
+@import "./styles/hero.css";
+@import "./styles/about.css";
+@import "./styles/projects.css";
+@import "./styles/skills.css";
+@import "./styles/footer.css";
+@import "./styles/buttons.css";
 
 :root {
   --main-theme-color: #9c5ee1;
@@ -46,7 +46,7 @@ body {
   line-height: 1.6;
   color: var(--theme-text-color);
   background-color: var(--theme-bg);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: all 0.7s cubic-bezier(0.65, 0.05, 0.36, 1);
