@@ -1,10 +1,13 @@
 export interface ProjectDetails {
-  project: {
-    image: string;
-    url: string;
-    text: ProjectDetailsText;
-    favorite?: boolean;
-  };
+  project: Project;
+  index: number;
+}
+
+export interface Project {
+  image: string;
+  url: string;
+  text: ProjectDetailsText;
+  favorite?: boolean;
 }
 
 export interface ProjectDetailsText {
