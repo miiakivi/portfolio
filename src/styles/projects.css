@@ -157,16 +157,14 @@
 }
 
 .overlay__text p {
-  font-size: 0.8rem;
+  opacity: 0;
+  transition: 0.65s cubic-bezier(0.85, -0.21, 0.27, 1.55);
+  font-size: 0.75rem;
 }
 
 @media (min-width: 300px) {
   .overlay__text h5 {
     font-size: 1rem;
-  }
-
-  .overlay__text p {
-    font-size: 0.9rem;
   }
 }
 
@@ -180,11 +178,6 @@
   }
 }
 
-.overlay__text p {
-  opacity: 0;
-  transition: 0.65s cubic-bezier(0.85, -0.21, 0.27, 1.55);
-}
-
 .overlay__link {
   padding: 0.8em;
   margin-top: 2em;
@@ -193,12 +186,11 @@
     var(--d, 100%) 100% no-repeat;
   border: 2px solid var(--secondary-theme-color);
   border-radius: 5px;
-
   text-decoration: none;
   font-family: "Kanit", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   transition: 0.5s;
 }
