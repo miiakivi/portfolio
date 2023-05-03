@@ -80,7 +80,7 @@ const projectDetails = [
       en: {
         title: "cv Maker",
         description:
-          "Practising React and React Hooks, I delved deeply into the workings of these powerful tools to create a user-friendly app that allows users to create their own CV by filling different form components. All information provided by the user is stored in local storage, allowing for easy retrieval and modification at a later time."
+          "Practising React and React Hooks, I dived deeply into the workings of these powerful tools to create a user-friendly app that allows users to create their own CV by filling different form components. All information provided by the user is stored in local storage, allowing for easy retrieval and modification at a later time."
       },
       fin: {
         title: "CV maker",
@@ -96,7 +96,7 @@ const projectDetails = [
       en: {
         title: "weather forecast",
         description:
-          "This project utilizes REST APIs from open weather map to enable users to search for current weather information and 5-day forecasts for specific locations. The project focused on improving my proficiency in asynchronous JavaScript and the use of modern JavaScript techniques such as async/await and fetch() methods. Overall, this project showcases my ability to create user-friendly solutions utilizing REST APIs and modern JavaScript techniques."
+          "This project utilizes REST APIs from open weather map to enable users to search for current weather information and 5-day forecasts for specific locations. The project focused on improving my proficiency in asynchronous JavaScript and the use of modern JavaScript techniques such as async/await and fetch() methods. Overall, this project showcases my ability to utilize REST APIs and modern JavaScript techniques."
       },
       fin: {
         title: "sään ennustaja",
@@ -112,7 +112,7 @@ const projectDetails = [
       en: {
         title: "super chat",
         description:
-          "Chat application that utilized Firebase, Firestore database, Firebase Storage services, and Google authentication to enable users to sign in and send/receive text and image messages to other online users. This project demonstrates my proficiency in creating efficient and secure web applications that prioritize real-time communication and user-friendly features."
+          "Chat application that utilized Firebase, Firestore database, Firebase Storage services, and Google authentication to enable users to sign in and send/receive text and image messages to other online users. This project demonstrates my proficiency in creating efficient and secure web applications that prioritize real-time communication."
       },
       fin: {
         title: "chatti appi",
