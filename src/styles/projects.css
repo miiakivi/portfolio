@@ -25,6 +25,7 @@
   height: 20px;
   background-color: #ffd301;
   color: #1e1e1e;
+  font-size: 0.875rem;
   font-weight: 600;
   clip-path: polygon(
     50% 0%,
@@ -46,6 +47,10 @@
 .star:hover {
   -webkit-animation: rotate-scale-up 0.65s linear both;
   animation: rotate-scale-up 0.65s linear both;
+}
+
+.star span {
+  height: 0.875rem;
 }
 
 /* ----------------------------------------------
