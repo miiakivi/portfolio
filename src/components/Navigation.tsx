@@ -78,8 +78,6 @@ function Navigation() {
             </ul>
             <div className="nav__extra">
               <div className="dark-mode-toggle">
-                <p>{isDarkMode ? "dark" : "light"}</p>
-
                 <DarkModeToggle
                   onChange={setIsDarkMode}
                   checked={isDarkMode}

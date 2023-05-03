@@ -121,9 +121,18 @@ nav {
   }
 }
 
-    }
+.nav__extra {
+  margin-top: 2rem;
 }
 
+@media (min-width: 800px) {
+  .nav__extra {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 0;
+  }
+}
 
 /* --- DARK MODE SWITCH ---  */
 
@@ -132,11 +141,6 @@ nav {
   align-self: center;
 }
 
-.dark-mode-toggle p {
-    margin: 0;
-    font-size: 0.6em;
-    letter-spacing: 1.2px;
-    color: rgba(241, 241, 241, 0.85);
 .languages__container {
   align-self: start;
   margin-top: 1em;
