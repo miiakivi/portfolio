@@ -15,15 +15,11 @@
 
 .star {
   display: flex;
-  padding: 1.75rem;
+  padding: 0.5rem;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: -25px;
-  left: -15px;
   width: 20px;
   height: 20px;
-  background-color: #ffd301;
   color: #1e1e1e;
   font-size: 0.875rem;
   font-weight: 600;
@@ -40,8 +36,11 @@
     38% 38%
   );
   z-index: 1;
-  border: 1px solid #fff14d;
+  border: 1px solid #f6c603;
   cursor: pointer;
+  background: #f6c603;
+  box-shadow: 0 0 0 0 rgba(255, 177, 66, 1);
+  animation: pulse-yellow 2s infinite;
 }
 
 .star:hover {
@@ -49,8 +48,21 @@
   animation: rotate-scale-up 0.65s linear both;
 }
 
-.star span {
-  height: 0.875rem;
+@keyframes pulse-yellow {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 177, 66, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 177, 66, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 177, 66, 0);
+  }
 }
 
 /* ----------------------------------------------
@@ -59,12 +71,6 @@
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation rotate-scale-up
- * ----------------------------------------
- */
 @-webkit-keyframes rotate-scale-up {
   0% {
     -webkit-transform: scale(1) rotateZ(0);
@@ -117,6 +123,13 @@
 
 .projects__item:hover .overlay__text p {
   opacity: 1;
+}
+
+.projects__item-favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .projects__item-img {

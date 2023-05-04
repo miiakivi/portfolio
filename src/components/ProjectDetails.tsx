@@ -10,6 +10,8 @@ function ProjectDetails( { project, index }: ProjectDetailsProps ) {
   const projectText =
     currentLanguage === "en" ? project.text.en : project.text.fin;
 
+  const favoriteClassName = project.favorite ? "projects__item-favorite" : "";
+
   return (
     <AnimationOnScroll
       animateOnce={true}
@@ -20,10 +22,11 @@ function ProjectDetails( { project, index }: ProjectDetailsProps ) {
         style={{ backgroundImage: `url(${project.image})` }}
         className="projects__item"
       >
-        <Star favorite={project.favorite}></Star>
         <div className="projects__item-overlay">
           <div className="overlay__text ">
-            <h5>{projectText.title}</h5>
+            <h5 className={favoriteClassName}>
+              {projectText.title} <Star favorite={project.favorite}></Star>
+            </h5>
             <p>{projectText.description}</p>
             <div className="mt-4">
               <a className="overlay__link" href={project.url}>
@@ -43,11 +46,7 @@ interface StarProps {
 
 function Star( { favorite }: StarProps ) {
   if ( favorite ) {
-    return (
-      <div className="star">
-        <span>#1</span>
-      </div>
-    );
+    return <div className="star"></div>;
   }
   return <></>;
 }
