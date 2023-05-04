@@ -29,7 +29,7 @@ function ProjectDetails( { project, index }: ProjectDetailsProps ) {
             </h5>
             <p>{projectText.description}</p>
             <div className="mt-4">
-              <a className="overlay__link" href={project.url}>
+              <a className="overlay__link secondary-btn" href={project.url}>
                 <Trans i18nKey="projectDetails.button" />
               </a>
             </div>

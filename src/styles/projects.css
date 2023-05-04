@@ -194,10 +194,6 @@
 .overlay__link {
   padding: 0.8em;
   margin-top: 2em;
-  color: #ffffff;
-  background: linear-gradient(var(--secondary-theme-color) 0 0) left /
-    var(--d, 100%) 100% no-repeat;
-  border: 2px solid var(--secondary-theme-color);
   border-radius: 5px;
   text-decoration: none;
   font-family: "Kanit", sans-serif;
@@ -206,11 +202,6 @@
   font-size: 0.75rem;
   font-weight: 600;
   transition: 0.5s;
-}
-
-.overlay__link:hover {
-  --d: 0%;
-  color: #ffffff;
 }
 
 .projects__icon {
