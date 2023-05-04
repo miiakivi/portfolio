@@ -1,10 +1,12 @@
 import React from "react";
 import profileImg from "../assets/profile.jpg";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function About() {
+  const { t, i18n } = useTranslation();
+
   return (
     <div id="about" className="section-container dark__accent">
       <AnimationOnScroll animateOnce={true} animateIn="animate__fadeInUp">

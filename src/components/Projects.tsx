@@ -1,13 +1,15 @@
 import React from "react";
 import { useState } from "react";
 
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import ProjectDetails from "./ProjectDetails";
 
 import projects from "../data/projectDetailsInfo";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function Projects() {
+  const { t, i18n } = useTranslation();
+
   const [ showAllProjects, setShowAllProjects ] = useState( false );
 
   return (
