@@ -5,6 +5,7 @@ import superchatImage from "../assets/superchatProject.jpg";
 import inventoryImage from "../assets/inventoryProject.jpg";
 import azureImage from "../assets/azureProject.jpg";
 import portfolioImage from "../assets/portfolioProject.jpg";
+import hslImage from "../assets/hslBicycleProject.jpg";
 
 const projectDetails = [
   {
@@ -21,6 +22,22 @@ const projectDetails = [
         title: "Battleships",
         description:
           "Reactin ja Webpackin avulla rakennettu klassinen laivanupotus peli, jossa pelaaja pelaa AI:tä vastaan. Projektin tavoitteena oli harjoitella JavaScript-objektien ja -classien käyttöä ja ottaa ensikosketus TDD (Test Driven Development) -käytäntöihin Jest:n avulla."
+      }
+    }
+  },
+  {
+    image: hslImage,
+    url: "https://github.com/MiiaNyy/helsinki-city-bike-app",
+    text: {
+      en: {
+        title: "HSL City Bicycle App",
+        description:
+          "This app validates and displays data from HSL city bicycle journeys and stations during 1.5.-31.7.2021. It uses GraphQL, MongoDB, and Apollo Server to validate CSV data and create a local database with two collections. The client can access the data using GraphQL queries, including lists of journeys and stations, total journey counts per station, average distances, and top 5 popular stations."
+      },
+      fin: {
+        title: "HSL Kaupunkipyörä Appi",
+        description:
+          "Tämä sovellus validoi ja näyttää HSL-kaupunkipyörämatkojen ja asemien tietoja ajalta 1.5.-31.7.2021. Se käyttää GraphQL:ää, MongoDB:tä ja Apollo Serveriä CSV-tietojen validointiin ja paikallisen tietokannan kahden kokoelman luomiseen. Client näyttää tiedot käyttäjälle GraphQL-kyselyjen avulla, mukaan lukien matkojen ja asemien luettelot, matkalaskurit asemakohtaisesti, keskimääräiset matkat ja suosituimmat asemat."
       }
     }
   },
