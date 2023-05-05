@@ -8,6 +8,7 @@ function changePageThemeColors( isDarkMode: boolean | undefined ) {
     root.style.setProperty( "--theme-text-color", "#f1f1f1" );
     root.style.setProperty( "--project-overlay-color", "rgba(156,94,225,0.85)" );
     root.style.setProperty( "--theme-footer-color", "#1E1E1E" );
+    root.style.setProperty( "--section-title-color", "#fff" );
     return;
   }
   // Light theme
@@ -17,6 +18,7 @@ function changePageThemeColors( isDarkMode: boolean | undefined ) {
   root.style.setProperty( "--theme-text-color", "#262b2f" );
   root.style.setProperty( "--project-overlay-color", "#8008FEC6" );
   root.style.setProperty( "--theme-footer-color", "#eee8ff" );
+  root.style.setProperty( "--section-title-color", "rgb(128,8,254)" );
 }
 
 export default changePageThemeColors;
