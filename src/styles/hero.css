@@ -17,8 +17,7 @@
 
 @media (min-width: 800px) {
   .hero__section {
-    height: calc(100vh - 98px); /* 98px is the height of the nav bar */
-    margin-top: 98px;
+    height: calc(100vh - 80px); /* 80px is the height of the nav bar */
   }
 }
 

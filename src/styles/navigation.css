@@ -38,6 +38,7 @@
 @media (min-width: 800px) {
   .navigation-content {
     display: block;
+    position: relative;
     width: 100%;
     height: initial;
     margin-top: 0;
