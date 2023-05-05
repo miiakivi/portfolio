@@ -40,11 +40,7 @@ function ProjectDetails( { project, index }: ProjectDetailsProps ) {
   );
 }
 
-interface StarProps {
-  favorite: boolean | undefined;
-}
-
-function Star( { favorite }: StarProps ) {
+function Star( { favorite }: { favorite: boolean | undefined } ) {
   if ( favorite ) {
     return <div className="star"></div>;
   }
