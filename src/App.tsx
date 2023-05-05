@@ -33,8 +33,10 @@ function App() {
       <Navigation />
       <main>
         <Hero />
-        <About />
-        <Experience />
+        <div className="background-image__accent">
+          <About />
+          <Experience />
+        </div>
         <Projects />
         <Skills />
       </main>

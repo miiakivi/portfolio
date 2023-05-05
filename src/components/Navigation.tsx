@@ -61,7 +61,7 @@ function Navigation() {
         <div className="nav-container">
           <nav>
             <div className="nav ">
-              <a className="navbar-brand" aria-current="page" href="#">
+              <a className="navbar-brand" aria-current="page">
                 <img
                   width="50"
                   src={logo}
@@ -72,6 +72,7 @@ function Navigation() {
             </div>
             <ul className="nav nav-list">
               <NavItem name="about" />
+              <NavItem name="experience" />
               <NavItem name="projects" />
               <NavItem name="skills" />
               <NavItem name="contact" />
