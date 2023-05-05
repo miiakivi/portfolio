@@ -29,17 +29,18 @@
 }
 
 .secondary-btn {
-  border: 3px solid var(--secondary-theme-color);
+  border: 3px solid var(--main-theme-color);
   color: #fff;
   background: linear-gradient(
     to left,
-    var(--secondary-theme-color) 50%,
+    var(--main-theme-color) 50%,
     var(--secondary-button-hover) 50%
   );
   background-size: 200% 100%;
   background-position: right bottom;
 }
 .secondary-btn:hover {
+  border: 3px solid var(--secondary-button-hover);
   color: #fff;
   background-position: left bottom;
 }

@@ -68,15 +68,23 @@ code {
 }
 
 .section-title {
-  color: var(--main-theme-color);
+  color: var(--section-title-color);
+}
+
+.section-title--light {
+  color: #fff;
 }
 
 .section-subtitle {
-  color: var(--secondary-theme-color);
   font-family: "Kanit", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-size: 0.8rem;
   font-style: italic;
-  margin-bottom: 0.5em;
+  background-color: var(--secondary-button-hover);
+  color: #fff;
+  width: fit-content;
+  margin: 0 auto 0.5em;
+  padding: 0 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
