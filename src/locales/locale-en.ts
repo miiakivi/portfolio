@@ -1,6 +1,7 @@
 export default {
   _navigation: {
     about: "about",
+    experience: "experience",
     projects: "projects",
     skills: "skills",
     contact: "Contact me"

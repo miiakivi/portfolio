@@ -2,6 +2,7 @@
 @import "./styles/navigation.css";
 @import "./styles/hero.css";
 @import "./styles/about.css";
+@import "./styles/experience.css";
 @import "./styles/projects.css";
 @import "./styles/skills.css";
 @import "./styles/footer.css";
@@ -16,6 +17,7 @@
   --theme-footer-color: #1e1e1e;
   --secondary-theme-color: #ff5e9f;
   --secondary-button-hover: #f8418a;
+  --section-title-color: "";
 }
 
 /* DARK THEME

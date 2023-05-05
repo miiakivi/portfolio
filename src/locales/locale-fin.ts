@@ -16,6 +16,10 @@ export default {
             "word4": "ukulelen soittaja"
         },
         "button": "ota yhteyttä"
+  experience: {
+    title: "Työkokemus",
+    subtitle: "Missä kaikkialla olen ollut töissä"
+  },
     },
     "about": {
         "title": "Minusta",
