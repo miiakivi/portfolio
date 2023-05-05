@@ -12,10 +12,10 @@ function About() {
       <AnimationOnScroll animateOnce={true} animateIn="animate__fadeInUp">
         <section className="about section">
           <div className="section-header">
-            <p className="section-subtitle accent-subtitle">
+            <p className="section-subtitle">
               <Trans i18nKey="about.subtitle" />
             </p>
-            <h2 className="section-title accent-title">
+            <h2 className="section-title section-title--light">
               <Trans i18nKey="about.title" />
             </h2>
           </div>
