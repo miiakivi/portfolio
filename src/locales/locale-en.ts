@@ -37,6 +37,10 @@ export default {
 
     button: "Say hello"
   },
+  experience: {
+    title: "Experience",
+    subtitle: "Places I have worked"
+  },
   projects: {
     title: "Projects",
     subtitle: "A Selection Of Stuff I've Built"

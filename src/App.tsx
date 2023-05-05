@@ -6,12 +6,13 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Socials from "./components/Socials";
 
-import translationEn from "./locales/en/translation";
-import translationFin from "./locales/fin/translation";
+import translationEn from "./locales/locale-en";
+import translationFin from "./locales/locale-fin";
 
 i18n
   .use( initReactI18next ) //passes i18n down to react-i18next
@@ -33,6 +34,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Experience />
         <Projects />
         <Skills />
       </main>
