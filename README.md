@@ -1,8 +1,8 @@
-<img src="src/assets/logo.png" width="40" height="40"/> 
+<img src="src/assets/logo.png" width="40" height="40"/>
 
-# Portfolio 
+# Portfolio
 
-Hi, I am Miia Nyyssönen and this is my portfolio. 
+Hi, I am Miia Kivisaari and this is my portfolio.
 
 I am a newly graduated software developer who is passionate about good user experience and simple but powerful design.
 In this portfolio, you can browse my most recent projects and learn a little more about me.
@@ -14,11 +14,10 @@ Page is created using React, TypeScript and CSS.
 ### [Live version](https://miianyy.github.io/portfolio/)
 
 ## Technologies
+
 - Typescript
 - JavaScript
-- React 
+- React
 - CSS
 - Bootstrap
 - 118n
-
-

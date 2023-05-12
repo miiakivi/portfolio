@@ -9,7 +9,7 @@ function Hero() {
       <h1 className="hero__title">
         <Trans i18nKey="hero.title" />
         <br />
-        <span>Miia Nyyssönen</span>
+        <span>Miia Kivisaari</span>
       </h1>
       <div className="hero__subtitle">
         <p>
