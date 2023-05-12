@@ -1,23 +1,39 @@
 <img src="src/assets/logo.png" width="40" height="40"/>
 
-# Portfolio
+# Portfolio: Showcasing Skills and Experience
 
-Hi, I am Miia Kivisaari and this is my portfolio.
+I graduated as a software developer in 2022 and as I embarked on the journey to find my first job opportunity I recognized the importance of establishing a strong online presence. To achieve this, I created a portfolio project that not only exhibits my skills and experience but also demonstrates my commitment to continuous learning and growth.
 
-I am a newly graduated software developer who is passionate about good user experience and simple but powerful design.
-In this portfolio, you can browse my most recent projects and learn a little more about me.
+## Project Overview
 
-If I get your interest, please don't hesitate to contact me or just say hello. You can find my contact information on the page.
+The portfolio project I developed is a testament to my proficiency in various technologies and my ability to create visually simple, beautifull and informative web applications.
 
-Page is created using React, TypeScript and CSS.
+Leveraging the power of React, TypeScript, Bootstrap, and CSS, I have crafted a dynamic and engaging portfolio that effectively communicates my capabilities and achievements.
 
-### [Live version](https://miianyy.github.io/portfolio/)
+## Key Features
 
-## Technologies
+### React
 
-- Typescript
-- JavaScript
-- React
-- CSS
-- Bootstrap
-- 118n
+Being a firm believer in the power and versatility of React, I made it my go-to framework for this project.
+
+### TypeScript
+
+This project served as an excellent playground for me to hone my TypeScript skills. By incorporating static typing throughout the codebase, I gained numerous advantages in terms of bug detection and overall code quality.
+
+### Bootstrap
+
+Leveraging the power of Bootstrap, I was able to create a responsive and mobile-friendly design and reduce the amount of CSS.
+
+### CSS
+
+The project features two themes - dark and light theme. To implement these, I utilized CSS variables, which allowed me to easily and efficiently modify the color palette and other visual elements across the entire project. The use of CSS variables also allows for easy customization and further theming in the future.
+
+### Animation
+
+To enhance user engagement, I incorporated animations using the react-animation-on-scroll package.
+
+### Localization
+
+Recognizing that most work places use english as they work language, I wanted to make the portfolio in two languages. I integrated English and Finnish translations into my portfolio using the i18next library.
+
+## Check the [live version](https://miiakivi.github.io/portfolio/)
