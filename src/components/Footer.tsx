@@ -44,7 +44,7 @@ function Footer() {
           <div className="footer__socials">
             <a
               className="social-link"
-              href="https://github.com/MiiaNyy"
+              href="https://github.com/miiakivi"
               role="button"
             >
               <i className="devicon-github-original social-icon" />
@@ -52,7 +52,7 @@ function Footer() {
             </a>
             <a
               className="social-link"
-              href="https://www.linkedin.com/in/miia-nyyss%C3%B6nen-66a0881b8/"
+              href="https://www.linkedin.com/in/miia-kivisaari-66a0881b8/"
               role="button"
             >
               <i className="fab fa-linkedin-in social-icon" />
