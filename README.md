@@ -6,7 +6,7 @@ I graduated as a software developer in 2022 and as I embarked on the journey to 
 
 ## Project Overview
 
-The portfolio project I developed is a testament to my proficiency in various technologies and my ability to create visually simple, beautifull and informative web applications.
+The portfolio project I developed is a testament to my proficiency in various technologies and my ability to create visually simple, beautiful and informative web applications.
 
 Leveraging the power of React, TypeScript, Bootstrap, and CSS, I have crafted a dynamic and engaging portfolio that effectively communicates my capabilities and achievements.
 
@@ -34,6 +34,6 @@ To enhance user engagement, I incorporated animations using the react-animation-
 
 ### Localization
 
-Recognizing that most work places use english as they work language, I wanted to make the portfolio in two languages. I integrated English and Finnish translations into my portfolio using the i18next library.
+Recognizing that most workplaces use English as their work language, I wanted to make the portfolio in two languages. I integrated English and Finnish translations into my portfolio using the i18next library.
 
 ## Check the [live version](https://miiakivi.github.io/portfolio/)
