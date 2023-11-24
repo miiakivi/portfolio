@@ -1,6 +1,7 @@
 /* --- NAVIGATION --- */
 
 .toggle-container {
+  cursor: pointer;
   text-align: right;
   padding: 11px 15px;
 }
@@ -8,7 +9,10 @@
 .nav__toggle-btn {
   font-size: 1.5rem;
   color: #f1f1f1;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 .navigation-content {
@@ -49,10 +53,6 @@
   .nav-container {
     margin: 0;
     display: block;
-  }
-
-  .toggle-container {
-    display: none;
   }
 }
 

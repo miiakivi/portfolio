@@ -28,13 +28,62 @@ function Navigation() {
     changePageThemeColors( isDarkMode );
   }, [ isDarkMode ] );
 
+  const [ windowWidth, setWindowWidth ] = useState( window.innerWidth );
+
+  const handleResize = () => {
+    setWindowWidth( window.innerWidth );
+  };
+
+  useEffect( () => {
+    // Add event listener to window resize
+    window.addEventListener( 'resize', handleResize );
+
+    // Remove event listener on component unmount
+    return () => {
+      window.removeEventListener( 'resize', handleResize );
+    };
+  }, [] ); // Empty dependency array ensures that this effect runs once after initial render
+
+  const [ isRotated, setIsRotated ] = useState( false );
+
+  const handleClick = () => {
+    // Toggle the state to add/remove the 'rotate' class
+    setIsRotated( !isRotated );
+    console.log( 'handleing click' )
+  };
+
+function ToggleContainer() {
+
+  const transform = navIsOpen && windowWidth < 800;
+  if ( windowWidth < 800 ) {
+    return (
+      <>
+          <div className="toggle-container">
+            <i
+              onClick={() => {
+                handleClick();
+                toggleNavigation( navIsOpen );
+                setNavIsOpen( ( prevValue ) => !prevValue );
+              }}
+              className={`fas fa-solid fa-angles-right nav__toggle-btn ${transform ? 'rotate' : ''}`}
+
+            />
+        </div>
+      </>
+    )
+  } else return <></>
+}
+
   function NavItem( { name }: NavItemProps ) {
     return (
       <li className="nav-item">
         <a
           onClick={() => {
-            setTimeout( () => toggleNavigation( navIsOpen ), 300 );
-            setNavIsOpen( ( prevValue ) => !prevValue );
+            if( windowWidth < 800 ) {
+              setTimeout( () => toggleNavigation( navIsOpen ), 300 );
+              setNavIsOpen( ( prevValue ) => !prevValue );
+            }
+
           }}
           className="nav-link active"
           aria-current="page"
@@ -49,15 +98,7 @@ function Navigation() {
   return (
     <>
       <div className="navigation-content">
-        <div className="toggle-container">
-          <i
-            onClick={() => {
-              toggleNavigation( navIsOpen );
-              setNavIsOpen( ( prevValue ) => !prevValue );
-            }}
-            className="fas fa-solid fa-angles-right nav__toggle-btn"
-          />
-        </div>
+        <ToggleContainer/>
         <div className="nav-container">
           <nav>
             <div className="nav ">
